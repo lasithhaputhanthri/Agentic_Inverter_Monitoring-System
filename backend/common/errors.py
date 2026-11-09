@@ -34,3 +34,27 @@ class MonitorError(IIRError):
     """Raised when monitoring detects unknown devices or invalid operational state."""
 
     pass
+
+
+class LLMError(IIRError):
+    """Base exception for errors originating from LLM interactions."""
+
+    pass
+
+
+class LLMTimeoutError(LLMError):
+    """Raised when an LLM provider request times out."""
+
+    pass
+
+
+class LLMQuotaExceededError(LLMError):
+    """Raised when a daily or per-run token or call budget is exhausted."""
+
+    pass
+
+
+class LLMUnavailableError(LLMError):
+    """Raised when all provider retry attempts are exhausted."""
+
+    pass
