@@ -1,0 +1,1502 @@
+[
+  {
+    "item_id": "ITEM-0001",
+    "alert": {
+      "alert_id": "aa847451-26ac-4dc5-bdb3-d417335bdca0",
+      "device_id": "INV-01",
+      "ts": "2026-06-01T12:15:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-01 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0002",
+    "alert": {
+      "alert_id": "608f7eee-b8d1-4e3b-bd5d-e1d32646a4d5",
+      "device_id": "INV-02",
+      "ts": "2026-06-01T12:30:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-02 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0003",
+    "alert": {
+      "alert_id": "fe76d678-095b-46d5-9328-78ac4cdb1c23",
+      "device_id": "INV-03",
+      "ts": "2026-06-01T12:45:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-03 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0004",
+    "alert": {
+      "alert_id": "f55be037-d9b5-43e1-acec-7c2b92268425",
+      "device_id": "INV-04",
+      "ts": "2026-06-01T13:00:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-04 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0005",
+    "alert": {
+      "alert_id": "6e2382fd-a23e-4d67-a57f-7b0669f57958",
+      "device_id": "INV-05",
+      "ts": "2026-06-01T13:15:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-05 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0006",
+    "alert": {
+      "alert_id": "24a93865-ffa9-4a78-95fd-fb49596e57ee",
+      "device_id": "INV-06",
+      "ts": "2026-06-01T13:30:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-06 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0007",
+    "alert": {
+      "alert_id": "ff66d0ea-2892-4c5d-b129-56d4a3b03cda",
+      "device_id": "INV-07",
+      "ts": "2026-06-01T13:45:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-07 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0008",
+    "alert": {
+      "alert_id": "307d6b03-1575-4217-a943-ad501f077de7",
+      "device_id": "INV-08",
+      "ts": "2026-06-01T14:00:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-08 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0009",
+    "alert": {
+      "alert_id": "97115f3c-9e33-475d-a93f-df3d3bca3181",
+      "device_id": "INV-09",
+      "ts": "2026-06-01T14:15:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-09 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0010",
+    "alert": {
+      "alert_id": "f5933dbd-3d61-41a7-8f27-f90585660534",
+      "device_id": "INV-10",
+      "ts": "2026-06-01T14:30:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-10 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0011",
+    "alert": {
+      "alert_id": "4ee487b3-4cf6-434a-aa0f-ef8f880de784",
+      "device_id": "INV-11",
+      "ts": "2026-06-01T14:45:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-11 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0012",
+    "alert": {
+      "alert_id": "662ce265-fed6-42d9-8f2b-546499e6b38e",
+      "device_id": "INV-12",
+      "ts": "2026-06-01T15:00:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-12 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0013",
+    "alert": {
+      "alert_id": "e7a47db6-c5c8-46a1-b5ad-ad84f6bdff8c",
+      "device_id": "INV-13",
+      "ts": "2026-06-01T15:15:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-13 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0014",
+    "alert": {
+      "alert_id": "f18b35d2-bf2d-4a2d-9c0c-f18fbb2a43e4",
+      "device_id": "INV-14",
+      "ts": "2026-06-01T15:30:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-14 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0015",
+    "alert": {
+      "alert_id": "d04b4070-972c-4dcf-98ca-ee83d0b99151",
+      "device_id": "INV-15",
+      "ts": "2026-06-01T15:45:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-15 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0016",
+    "alert": {
+      "alert_id": "bbee37a5-39df-493e-8f4d-632b7c60beed",
+      "device_id": "INV-16",
+      "ts": "2026-06-01T16:00:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-16 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0017",
+    "alert": {
+      "alert_id": "b91f773b-3ebc-4db7-a00f-39af3162f46c",
+      "device_id": "INV-17",
+      "ts": "2026-06-01T16:15:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-17 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0018",
+    "alert": {
+      "alert_id": "1b07538a-d735-495d-9c6c-0e260def085e",
+      "device_id": "INV-18",
+      "ts": "2026-06-01T16:30:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-18 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0019",
+    "alert": {
+      "alert_id": "557dd50e-345e-45f0-9aa8-06b75578bff8",
+      "device_id": "INV-19",
+      "ts": "2026-06-01T16:45:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-19 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0020",
+    "alert": {
+      "alert_id": "e6c4fcdd-9fe4-48b6-89ff-add3ededdf92",
+      "device_id": "INV-20",
+      "ts": "2026-06-01T17:00:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "warning",
+      "observed": 68.5,
+      "threshold": 12.0,
+      "message": "Inverter INV-20 temperature 68.5C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "overheating",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0021",
+    "alert": {
+      "alert_id": "afd8c47f-0005-45f5-ace6-fd3e6c5f9851",
+      "device_id": "INV-01",
+      "ts": "2026-06-01T17:15:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-01 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0022",
+    "alert": {
+      "alert_id": "c6926edd-2855-4c09-84e5-b4385c866430",
+      "device_id": "INV-02",
+      "ts": "2026-06-01T17:30:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-02 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0023",
+    "alert": {
+      "alert_id": "1d576b34-24da-4a62-990b-d877ae0506aa",
+      "device_id": "INV-03",
+      "ts": "2026-06-01T17:45:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-03 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0024",
+    "alert": {
+      "alert_id": "6dfd1be3-f3db-4ce3-9bbd-d896461a7188",
+      "device_id": "INV-04",
+      "ts": "2026-06-01T18:00:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-04 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0025",
+    "alert": {
+      "alert_id": "2b004982-e879-464f-86b3-929014533521",
+      "device_id": "INV-05",
+      "ts": "2026-06-01T18:15:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-05 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0026",
+    "alert": {
+      "alert_id": "a16a958e-ee6e-43b5-aace-43a74c0cd408",
+      "device_id": "INV-06",
+      "ts": "2026-06-01T18:30:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-06 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0027",
+    "alert": {
+      "alert_id": "e9ad769c-1c9b-4ec0-8fb4-aca6dddba2be",
+      "device_id": "INV-07",
+      "ts": "2026-06-01T18:45:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-07 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0028",
+    "alert": {
+      "alert_id": "30c07496-b7c5-48af-a4a1-b051df80e14c",
+      "device_id": "INV-08",
+      "ts": "2026-06-01T19:00:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-08 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0029",
+    "alert": {
+      "alert_id": "f42730ce-4977-44c9-92c9-22874d1eac1b",
+      "device_id": "INV-09",
+      "ts": "2026-06-01T19:15:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-09 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0030",
+    "alert": {
+      "alert_id": "6acc82d4-933a-475b-bd70-d5d37c6574b2",
+      "device_id": "INV-10",
+      "ts": "2026-06-01T19:30:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-10 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0031",
+    "alert": {
+      "alert_id": "58559622-02c9-4bf4-8758-d502b28217d4",
+      "device_id": "INV-11",
+      "ts": "2026-06-01T19:45:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-11 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0032",
+    "alert": {
+      "alert_id": "ee405376-f73a-4100-8926-09f79364cfcc",
+      "device_id": "INV-12",
+      "ts": "2026-06-01T20:00:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-12 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0033",
+    "alert": {
+      "alert_id": "553b8133-b3ae-41af-8b56-1b055d904c13",
+      "device_id": "INV-13",
+      "ts": "2026-06-01T20:15:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-13 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0034",
+    "alert": {
+      "alert_id": "d2bb18b1-dfeb-4c9b-b45e-29056e519a16",
+      "device_id": "INV-14",
+      "ts": "2026-06-01T20:30:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-14 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0035",
+    "alert": {
+      "alert_id": "dd688c53-3fdf-4a31-865e-ac37e8cc5a8f",
+      "device_id": "INV-15",
+      "ts": "2026-06-01T20:45:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-15 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0036",
+    "alert": {
+      "alert_id": "304fea1a-6549-4cdd-9bf1-19ac43af332a",
+      "device_id": "INV-16",
+      "ts": "2026-06-01T21:00:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-16 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0037",
+    "alert": {
+      "alert_id": "3c2812c9-fafb-449c-9929-3ab259b2a441",
+      "device_id": "INV-17",
+      "ts": "2026-06-01T21:15:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-17 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0038",
+    "alert": {
+      "alert_id": "254a20e6-b4b9-4a63-92c0-57842f638222",
+      "device_id": "INV-18",
+      "ts": "2026-06-01T21:30:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-18 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0039",
+    "alert": {
+      "alert_id": "7af4b4fd-945f-42ff-beca-4ef2a462237d",
+      "device_id": "INV-19",
+      "ts": "2026-06-01T21:45:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-19 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0040",
+    "alert": {
+      "alert_id": "e760f98c-fefc-45de-af44-afae6b6928c0",
+      "device_id": "INV-20",
+      "ts": "2026-06-01T22:00:00Z",
+      "rule": "grid_voltage_low",
+      "severity": "warning",
+      "observed": 195.0,
+      "threshold": 207.0,
+      "message": "Inverter INV-20 grid voltage 195.0V below allowable threshold 207.0V for 3 readings."
+    },
+    "ground_truth_cause": "grid_sag",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0041",
+    "alert": {
+      "alert_id": "95d65d53-7b38-4942-abf5-7a0fa95a5d19",
+      "device_id": "INV-01",
+      "ts": "2026-06-01T22:15:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-01 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0042",
+    "alert": {
+      "alert_id": "8d39d804-5ea7-4750-b828-013dc077effd",
+      "device_id": "INV-02",
+      "ts": "2026-06-01T22:30:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-02 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0043",
+    "alert": {
+      "alert_id": "d706f6a2-2b27-46be-94dc-4c568ebcfff6",
+      "device_id": "INV-03",
+      "ts": "2026-06-01T22:45:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-03 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0044",
+    "alert": {
+      "alert_id": "589d24d4-595f-4151-89fa-3447e5a83ad7",
+      "device_id": "INV-04",
+      "ts": "2026-06-01T23:00:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-04 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0045",
+    "alert": {
+      "alert_id": "ab9ca183-bd2d-484b-9b6c-b97553f0c17b",
+      "device_id": "INV-05",
+      "ts": "2026-06-01T23:15:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-05 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0046",
+    "alert": {
+      "alert_id": "e29d694a-3776-4d16-8b83-a260cf55e44f",
+      "device_id": "INV-06",
+      "ts": "2026-06-01T23:30:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-06 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0047",
+    "alert": {
+      "alert_id": "4e913305-52d9-4351-a902-e761d3c1f12a",
+      "device_id": "INV-07",
+      "ts": "2026-06-01T23:45:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-07 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0048",
+    "alert": {
+      "alert_id": "f4855e67-1462-43eb-95d6-591ae3eef0a3",
+      "device_id": "INV-08",
+      "ts": "2026-06-02T00:00:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-08 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0049",
+    "alert": {
+      "alert_id": "5c92613c-f495-4cb8-a1dd-485ccf403c8e",
+      "device_id": "INV-09",
+      "ts": "2026-06-02T00:15:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-09 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0050",
+    "alert": {
+      "alert_id": "88829da8-45b0-450f-9e70-ba1cf1c9d391",
+      "device_id": "INV-10",
+      "ts": "2026-06-02T00:30:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-10 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0051",
+    "alert": {
+      "alert_id": "9be0c7a9-d77d-4dc1-9c51-3a6e351ae129",
+      "device_id": "INV-11",
+      "ts": "2026-06-02T00:45:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-11 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0052",
+    "alert": {
+      "alert_id": "93e5ae73-feb6-42d5-abf1-3c424a6f8b07",
+      "device_id": "INV-12",
+      "ts": "2026-06-02T01:00:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-12 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0053",
+    "alert": {
+      "alert_id": "647192de-8ac9-4c2b-b550-5406e393f873",
+      "device_id": "INV-13",
+      "ts": "2026-06-02T01:15:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-13 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0054",
+    "alert": {
+      "alert_id": "3a648840-8bcb-4b5e-b844-309faf28d204",
+      "device_id": "INV-14",
+      "ts": "2026-06-02T01:30:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-14 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0055",
+    "alert": {
+      "alert_id": "1a42d3ff-e8fe-4f43-9fae-c8f65592b42b",
+      "device_id": "INV-15",
+      "ts": "2026-06-02T01:45:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-15 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0056",
+    "alert": {
+      "alert_id": "e2a84020-1dfd-4247-ad04-699c249d2961",
+      "device_id": "INV-16",
+      "ts": "2026-06-02T02:00:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-16 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0057",
+    "alert": {
+      "alert_id": "de454c07-932d-4c4e-bfad-5b5658bd3b49",
+      "device_id": "INV-17",
+      "ts": "2026-06-02T02:15:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-17 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0058",
+    "alert": {
+      "alert_id": "45fb9aeb-7f06-4b88-a53a-cafd75d5ec77",
+      "device_id": "INV-18",
+      "ts": "2026-06-02T02:30:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-18 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0059",
+    "alert": {
+      "alert_id": "30dce222-395c-4808-b796-fbfcf0bffbf9",
+      "device_id": "INV-19",
+      "ts": "2026-06-02T02:45:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-19 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0060",
+    "alert": {
+      "alert_id": "f258e025-94df-429c-af34-ebbdf3853c4f",
+      "device_id": "INV-20",
+      "ts": "2026-06-02T03:00:00Z",
+      "rule": "relay_mismatch",
+      "severity": "critical",
+      "observed": "open (1500W)",
+      "threshold": 200.0,
+      "message": "Inverter INV-20 relay open while active power exceeds 200.0W for 2 consecutive readings."
+    },
+    "ground_truth_cause": "stuck_relay",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0061",
+    "alert": {
+      "alert_id": "a3559155-f2ee-4fdf-b128-0d933ac70255",
+      "device_id": "INV-01",
+      "ts": "2026-06-02T03:15:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-01 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0062",
+    "alert": {
+      "alert_id": "9fd3e60c-1efe-4221-a994-9a958b549ce9",
+      "device_id": "INV-02",
+      "ts": "2026-06-02T03:30:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-02 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0063",
+    "alert": {
+      "alert_id": "62ee8182-05df-45eb-80a8-38def4d2f081",
+      "device_id": "INV-03",
+      "ts": "2026-06-02T03:45:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-03 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0064",
+    "alert": {
+      "alert_id": "e8f742d0-5342-4152-ae91-f4523303284b",
+      "device_id": "INV-04",
+      "ts": "2026-06-02T04:00:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-04 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0065",
+    "alert": {
+      "alert_id": "66da50b4-3561-434d-818c-deaf2c4b6b41",
+      "device_id": "INV-05",
+      "ts": "2026-06-02T04:15:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-05 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0066",
+    "alert": {
+      "alert_id": "bc721093-652e-40c5-a992-8667a7c24e06",
+      "device_id": "INV-06",
+      "ts": "2026-06-02T04:30:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-06 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0067",
+    "alert": {
+      "alert_id": "8acdd779-0937-4b54-952b-c4941fee90dd",
+      "device_id": "INV-07",
+      "ts": "2026-06-02T04:45:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-07 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0068",
+    "alert": {
+      "alert_id": "144d3843-d51e-4255-9331-2207298a21e2",
+      "device_id": "INV-08",
+      "ts": "2026-06-02T05:00:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-08 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0069",
+    "alert": {
+      "alert_id": "369d5850-d120-4f8b-a87d-0602a3262ec8",
+      "device_id": "INV-09",
+      "ts": "2026-06-02T05:15:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-09 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0070",
+    "alert": {
+      "alert_id": "fcec73ae-f019-446b-8ed0-927848339414",
+      "device_id": "INV-10",
+      "ts": "2026-06-02T05:30:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-10 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0071",
+    "alert": {
+      "alert_id": "cf790922-8032-401e-a002-9843b11305a9",
+      "device_id": "INV-11",
+      "ts": "2026-06-02T05:45:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-11 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0072",
+    "alert": {
+      "alert_id": "6fb7d3db-21cf-455e-866d-ef7c4eb0d64f",
+      "device_id": "INV-12",
+      "ts": "2026-06-02T06:00:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-12 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0073",
+    "alert": {
+      "alert_id": "89c61e2f-d22f-4085-a2fc-dd74a8f22194",
+      "device_id": "INV-13",
+      "ts": "2026-06-02T06:15:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-13 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0074",
+    "alert": {
+      "alert_id": "ab81e47e-1bb0-4892-9309-27ad3a9dcbf3",
+      "device_id": "INV-14",
+      "ts": "2026-06-02T06:30:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-14 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0075",
+    "alert": {
+      "alert_id": "ee189616-f666-4e35-9453-272bebf0b407",
+      "device_id": "INV-15",
+      "ts": "2026-06-02T06:45:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-15 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0076",
+    "alert": {
+      "alert_id": "d3b38c43-e390-4f4e-b97f-460b86f53d85",
+      "device_id": "INV-16",
+      "ts": "2026-06-02T07:00:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-16 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0077",
+    "alert": {
+      "alert_id": "83fd394c-c388-457e-8c74-34ffd28a0ad8",
+      "device_id": "INV-17",
+      "ts": "2026-06-02T07:15:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-17 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0078",
+    "alert": {
+      "alert_id": "ccd91270-6d05-47b4-8753-51b92389f583",
+      "device_id": "INV-18",
+      "ts": "2026-06-02T07:30:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-18 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0079",
+    "alert": {
+      "alert_id": "7bd0249e-e67e-4102-b245-d46c6e819d4a",
+      "device_id": "INV-19",
+      "ts": "2026-06-02T07:45:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-19 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0080",
+    "alert": {
+      "alert_id": "63ff7e56-53b6-447b-aba1-da60084714bb",
+      "device_id": "INV-20",
+      "ts": "2026-06-02T08:00:00Z",
+      "rule": "device_silent",
+      "severity": "warning",
+      "observed": 75.0,
+      "threshold": 60.0,
+      "message": "Inverter INV-20 silent for 75.0s (threshold: 60.0s)."
+    },
+    "ground_truth_cause": "comm_dropout",
+    "is_false_alarm": false
+  },
+  {
+    "item_id": "ITEM-0081",
+    "alert": {
+      "alert_id": "07a5e9f0-6e4e-42b9-8bc9-8c8045b614c4",
+      "device_id": "INV-01",
+      "ts": "2026-06-02T08:15:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-01 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0082",
+    "alert": {
+      "alert_id": "eafe1c00-888e-4587-99a0-5e103833bd65",
+      "device_id": "INV-02",
+      "ts": "2026-06-02T08:30:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-02 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0083",
+    "alert": {
+      "alert_id": "69846c42-94cf-4bed-8070-ef529a6dc4d3",
+      "device_id": "INV-03",
+      "ts": "2026-06-02T08:45:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-03 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0084",
+    "alert": {
+      "alert_id": "e0dddb67-c9d6-4697-8896-5a798453a1c6",
+      "device_id": "INV-04",
+      "ts": "2026-06-02T09:00:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-04 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0085",
+    "alert": {
+      "alert_id": "152ce1cf-a6fa-41da-9bad-e032caea2db5",
+      "device_id": "INV-05",
+      "ts": "2026-06-02T09:15:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-05 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0086",
+    "alert": {
+      "alert_id": "3e7e567a-cccf-450f-8dd7-9d4384c0e8a9",
+      "device_id": "INV-06",
+      "ts": "2026-06-02T09:30:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-06 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0087",
+    "alert": {
+      "alert_id": "ee32b895-12b4-4d80-948e-2f6e600e7ce9",
+      "device_id": "INV-07",
+      "ts": "2026-06-02T09:45:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-07 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0088",
+    "alert": {
+      "alert_id": "040da4f5-3591-4434-bdb8-2db38fe7615d",
+      "device_id": "INV-08",
+      "ts": "2026-06-02T10:00:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-08 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0089",
+    "alert": {
+      "alert_id": "61ea0495-3a63-42ac-88ee-67531fcf007d",
+      "device_id": "INV-09",
+      "ts": "2026-06-02T10:15:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-09 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0090",
+    "alert": {
+      "alert_id": "ad01dc80-65d9-4698-8257-000e73897fa1",
+      "device_id": "INV-10",
+      "ts": "2026-06-02T10:30:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-10 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0091",
+    "alert": {
+      "alert_id": "70ba4061-42b1-4679-8d38-3a0bead770fb",
+      "device_id": "INV-11",
+      "ts": "2026-06-02T10:45:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-11 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0092",
+    "alert": {
+      "alert_id": "c7a9fd66-ea78-4d2a-a05b-2e8e3e722cf8",
+      "device_id": "INV-12",
+      "ts": "2026-06-02T11:00:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-12 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0093",
+    "alert": {
+      "alert_id": "4e36837c-81ee-4d2b-bf21-fc1fc4b27a55",
+      "device_id": "INV-13",
+      "ts": "2026-06-02T11:15:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-13 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0094",
+    "alert": {
+      "alert_id": "24158048-79ac-4782-b232-df1cac1f6ae1",
+      "device_id": "INV-14",
+      "ts": "2026-06-02T11:30:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-14 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0095",
+    "alert": {
+      "alert_id": "edd8bb83-6104-4360-920e-c67fefa49bb1",
+      "device_id": "INV-15",
+      "ts": "2026-06-02T11:45:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-15 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0096",
+    "alert": {
+      "alert_id": "11e4073f-4e9c-4b83-b0c2-66c37e2e72b1",
+      "device_id": "INV-16",
+      "ts": "2026-06-02T12:00:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-16 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0097",
+    "alert": {
+      "alert_id": "bc2f7024-e577-42ee-9a88-69cec2f4247a",
+      "device_id": "INV-17",
+      "ts": "2026-06-02T12:15:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-17 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0098",
+    "alert": {
+      "alert_id": "3f89d99c-13e7-4261-95c8-ccd7061cce35",
+      "device_id": "INV-18",
+      "ts": "2026-06-02T12:30:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-18 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0099",
+    "alert": {
+      "alert_id": "89df6514-fc59-4662-b900-65ccf15e9b78",
+      "device_id": "INV-19",
+      "ts": "2026-06-02T12:45:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-19 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  },
+  {
+    "item_id": "ITEM-0100",
+    "alert": {
+      "alert_id": "20ac836d-5b62-4b65-8776-40aa0ca8a6f9",
+      "device_id": "INV-20",
+      "ts": "2026-06-02T13:00:00Z",
+      "rule": "temp_high_for_power",
+      "severity": "info",
+      "observed": 48.0,
+      "threshold": 12.0,
+      "message": "Inverter INV-20 temperature 48.0C exceeds expected by >12.0C for 3 consecutive readings."
+    },
+    "ground_truth_cause": "unknown",
+    "is_false_alarm": true
+  }
+]

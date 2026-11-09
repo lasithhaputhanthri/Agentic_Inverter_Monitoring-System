@@ -1,0 +1,51 @@
+{
+  "evaluation_split": "tuning",
+  "total_alerts": 100,
+  "correct_predictions": 100,
+  "accuracy": 1.0,
+  "confusion_matrix": {
+    "overheating": {
+      "overheating": 20,
+      "grid_sag": 0,
+      "stuck_relay": 0,
+      "comm_dropout": 0,
+      "unknown": 0
+    },
+    "grid_sag": {
+      "overheating": 0,
+      "grid_sag": 20,
+      "stuck_relay": 0,
+      "comm_dropout": 0,
+      "unknown": 0
+    },
+    "stuck_relay": {
+      "overheating": 0,
+      "grid_sag": 0,
+      "stuck_relay": 20,
+      "comm_dropout": 0,
+      "unknown": 0
+    },
+    "comm_dropout": {
+      "overheating": 0,
+      "grid_sag": 0,
+      "stuck_relay": 0,
+      "comm_dropout": 20,
+      "unknown": 0
+    },
+    "unknown": {
+      "overheating": 0,
+      "grid_sag": 0,
+      "stuck_relay": 0,
+      "comm_dropout": 0,
+      "unknown": 20
+    }
+  },
+  "token_usage_per_alert": {
+    "input_tokens_mean": 499.4,
+    "input_tokens_max": 501,
+    "output_tokens_mean": 27.6,
+    "output_tokens_max": 29,
+    "total_tokens_mean": 527.0
+  },
+  "held_out_status": "Generated and preserved under tests/eval/fixtures/held_out/ (un-run, untuned)"
+}
