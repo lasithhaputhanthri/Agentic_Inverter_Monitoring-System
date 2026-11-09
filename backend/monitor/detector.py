@@ -40,6 +40,7 @@ class TelemetryMonitor:
         known_devices: Sequence[str] | None = None,
         run_id: str = "default_run",
         start_time: datetime | None = None,
+        device_specs: dict[str, float] | None = None,
     ) -> None:
         self.config = config or MonitorConfig()
         self.known_devices = (
@@ -53,6 +54,7 @@ class TelemetryMonitor:
             if start_time is not None and start_time.tzinfo is not None
             else (start_time.replace(tzinfo=UTC) if start_time is not None else None)
         )
+        self.device_specs: dict[str, float] = dict(device_specs) if device_specs is not None else {}
 
         self.windows: dict[str, deque[TelemetryMessage]] = {
             dev_id: deque(maxlen=self.config.window_size) for dev_id in self.known_devices
@@ -122,10 +124,12 @@ class TelemetryMonitor:
         alerts: list[Alert] = []
 
         # Rule 1: Temperature high for power
+        rated_w = self.device_specs.get(msg.device_id, 5000.0)
         temp_triggered, temp_obs, temp_thresh = evaluate_temp_high_for_power(
             readings=readings,
             threshold_delta_c=self.config.temp_delta_c,
             consecutive_readings=self.config.temp_consecutive_readings,
+            rated_power_w=rated_w,
         )
         if temp_triggered and self.cooldown_tracker.can_alert(
             msg.device_id,

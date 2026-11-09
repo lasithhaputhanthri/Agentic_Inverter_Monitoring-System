@@ -41,6 +41,7 @@ def evaluate_monitor_false_alarms(
 ) -> dict[str, Any]:
     """Run a fault-free simulation and record baseline false alarm metrics."""
     fleet = make_fleet(devices, seed=seed)
+    specs = {d.device_id: d.rated_power_w for d in fleet}
     start_time = datetime(2026, 6, 1, 0, 0, 0, tzinfo=UTC)
     clock = FakeClock(initial_time=start_time)
 
@@ -49,6 +50,7 @@ def evaluate_monitor_false_alarms(
         known_devices=[d.device_id for d in fleet],
         run_id=f"fault_free_run_{seed}",
         start_time=start_time,
+        device_specs=specs,
     )
 
     all_alerts: list[Alert] = []
@@ -118,14 +120,20 @@ def evaluate_monitor_detection(
     )
 
     run_id = f"detection_eval_{seed}"
+    gt_file = Path(gt_dir) / f"{run_id}.jsonl"
+    if gt_file.exists():
+        gt_file.unlink()
+
     writer = GroundTruthWriter(run_id=run_id, base_dir=gt_dir)
     session = FaultSession(faults, seed=seed, on_fault_injected=writer.record_fault)
 
+    specs = {d.device_id: d.rated_power_w for d in fleet}
     monitor = TelemetryMonitor(
         config=MonitorConfig(),
         known_devices=[d.device_id for d in fleet],
         run_id=run_id,
         start_time=start_time,
+        device_specs=specs,
     )
 
     all_alerts: list[Alert] = []
