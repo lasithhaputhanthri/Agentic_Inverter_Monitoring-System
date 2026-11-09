@@ -80,18 +80,19 @@ class Settings(BaseSettings):
         env_file=None,
         env_ignore_empty=False,
         extra="ignore",
+        populate_by_name=True,
     )
 
-    app_env: str = Field(default="development", alias="APP_ENV")
-    mqtt_host: str = Field(default="localhost", alias="MQTT_HOST")
-    mqtt_port: int = Field(default=1883, alias="MQTT_PORT")
-    mqtt_username: str = Field(default="simulator", alias="MQTT_USERNAME")
-    mqtt_password: str = Field(default="", alias="MQTT_PASSWORD")
-    mqtt_tls: bool = Field(default=False, alias="MQTT_TLS")
-    api_key_pepper: str = Field(default="", alias="API_KEY_PEPPER")
-    llm_provider: str = Field(default="mock", alias="LLM_PROVIDER")
-    llm_model: str = Field(default="mock-model", alias="LLM_MODEL")
-    llm_api_key: str = Field(default="", alias="LLM_API_KEY")
+    app_env: str = Field(default="development", validation_alias="APP_ENV")
+    mqtt_host: str = Field(default="localhost", validation_alias="MQTT_HOST")
+    mqtt_port: int = Field(default=1883, validation_alias="MQTT_PORT")
+    mqtt_username: str = Field(default="simulator", validation_alias="MQTT_USERNAME")
+    mqtt_password: str = Field(default="", validation_alias="MQTT_PASSWORD")
+    mqtt_tls: bool = Field(default=False, validation_alias="MQTT_TLS")
+    api_key_pepper: str = Field(default="", validation_alias="API_KEY_PEPPER")
+    llm_provider: str = Field(default="mock", validation_alias="LLM_PROVIDER")
+    llm_model: str = Field(default="mock-model", validation_alias="LLM_MODEL")
+    llm_api_key: str = Field(default="", validation_alias="LLM_API_KEY")
 
     limits: LimitsConfig = Field(default_factory=LimitsConfig)
     tokens: TokensConfig = Field(default_factory=TokensConfig)
