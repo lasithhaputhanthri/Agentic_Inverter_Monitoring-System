@@ -11,7 +11,7 @@ import argparse
 import random
 import time
 from collections.abc import Callable
-from datetime import timedelta
+from datetime import datetime, timedelta
 from typing import Any
 
 from backend.common.clock import Clock, FakeClock, SystemClock
@@ -38,11 +38,13 @@ class SimulationRunner:
         publisher: TelemetryPublisher | None = None,
         seed: int = 42,
         tick_interval_s: float = DEFAULT_TICK_INTERVAL_S,
+        fault_hook: Callable[[TelemetryMessage, datetime], TelemetryMessage | None] | None = None,
     ) -> None:
         self.fleet = fleet
         self.clock = clock
         self.publisher = publisher
         self.tick_interval_s = tick_interval_s
+        self.fault_hook = fault_hook
         self._rngs: dict[str, random.Random] = {
             profile.device_id: random.Random(seed + idx)  # nosec: B311
             for idx, profile in enumerate(fleet)
@@ -60,6 +62,13 @@ class SimulationRunner:
             rng = self._rngs[profile.device_id]
             state = self._device_states[profile.device_id]
             msg = next_telemetry(profile, state, current_time, rng)
+
+            if self.fault_hook is not None:
+                faulted_msg = self.fault_hook(msg, current_time)
+                if faulted_msg is None:
+                    continue  # Comm dropout: suppressed
+                msg = faulted_msg
+
             messages.append(msg)
 
             if self.publisher is not None:

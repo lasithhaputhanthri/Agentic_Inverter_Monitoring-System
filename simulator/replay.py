@@ -11,12 +11,42 @@ import hashlib
 from collections.abc import Iterator
 from datetime import UTC, datetime
 from pathlib import Path
+from types import TracebackType
+from typing import TextIO
 
 from backend.common.clock import FakeClock
 from backend.common.schemas import TelemetryMessage
 
 from simulator.devices import make_fleet
 from simulator.runner import DEFAULT_TICK_INTERVAL_S, SimulationRunner
+
+
+class SimulationRecorder:
+    """Context manager for writing streamed TelemetryMessages into a JSONL replay file."""
+
+    def __init__(self, file_path: Path | str) -> None:
+        self.file_path = Path(file_path)
+        self.file_path.parent.mkdir(parents=True, exist_ok=True)
+        self._file: TextIO | None = None
+
+    def __enter__(self) -> SimulationRecorder:
+        self._file = open(self.file_path, "w", encoding="utf-8")
+        return self
+
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_val: BaseException | None,
+        exc_tb: TracebackType | None,
+    ) -> None:
+        if self._file is not None:
+            self._file.close()
+            self._file = None
+
+    def record(self, msg: TelemetryMessage) -> None:
+        """Write a single TelemetryMessage as a JSON line."""
+        if self._file is not None:
+            self._file.write(msg.model_dump_json() + "\n")
 
 
 def compute_file_sha256(path: Path | str) -> str:
@@ -84,3 +114,7 @@ def replay_telemetry(file_path: Path | str) -> Iterator[TelemetryMessage]:
             stripped = line.strip()
             if stripped:
                 yield TelemetryMessage.model_validate_json(stripped)
+
+
+# Alias for readability
+read_simulation_replay = replay_telemetry
