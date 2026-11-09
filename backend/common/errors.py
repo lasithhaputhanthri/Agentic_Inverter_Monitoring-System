@@ -22,3 +22,9 @@ class ConfigError(IIRError):
         self.variable_name = variable_name
         detail = message or f"Missing required configuration secret: {variable_name}"
         super().__init__(detail)
+
+
+class FaultPlanError(IIRError):
+    """Raised when fault planning encounters invalid parameters, overlapping faults, or unknown device IDs."""
+
+    pass
