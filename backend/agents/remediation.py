@@ -259,3 +259,6 @@ class RemediationAgent:
             model=model,
             prompt_hash=self.prompt_hash,
         )
+
+    # Alias for propose_action
+    propose = propose_action

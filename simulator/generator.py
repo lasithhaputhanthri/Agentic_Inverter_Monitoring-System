@@ -45,17 +45,19 @@ def next_telemetry(
     Returns:
         Validated, immutable TelemetryMessage.
     """
-    del state  # Reserved for multi-step fault dynamics in future phases
-
     # Calculate decimal local hour from the timestamp
     hour = ts.hour + (ts.minute / 60.0) + (ts.second / 3600.0)
     is_daylight = SUNRISE_HOUR < hour < SUNSET_HOUR
 
-    # Nominal expected power
-    nom_power = expected_power(profile, hour)
+    # Check for active simulator state overrides (e.g. from remediation actions)
+    dev_state = state or {}
+    load_scale = float(dev_state.get("load_scale", 1.0))
+
+    # Nominal expected power scaled by any active load reduction
+    nom_power = expected_power(profile, hour) * load_scale
 
     if is_daylight and nom_power > 0.0:
-        relay: RelayState = "closed"
+        relay: RelayState = dev_state.get("relay_state", "closed")
         # Seeded Gaussian noise ~ 1% on power
         power_noise = rng.gauss(0.0, 0.01 * nom_power)
         ac_power = round(max(0.0, min(10000.0, nom_power + power_noise)), 1)
@@ -63,7 +65,7 @@ def next_telemetry(
         nominal_dc = profile.panel_count * PANEL_VMP_V
         dc_voltage = round(max(0.0, min(1000.0, nominal_dc + rng.gauss(0.0, 2.0))), 1)
     else:
-        relay = "open"
+        relay = dev_state.get("relay_state", "open")
         ac_power = 0.0
         dc_voltage = 0.0
 

@@ -106,6 +106,30 @@ class SimulationRunner:
 
         return total_messages
 
+    # SimulatorStateAPI implementation for safe remediation execution (SEC-41)
+    def has_device(self, device_id: str) -> bool:
+        """Verify device existence in simulator fleet."""
+        return device_id in self._device_states
+
+    def update_device_state(self, device_id: str, updates: dict[str, Any]) -> None:
+        """Apply state updates to the simulated device."""
+        if device_id not in self._device_states:
+            raise KeyError(f"Unknown device ID: {device_id}")
+        self._device_states[device_id].update(updates)
+
+    def append_maintenance_note(self, device_id: str, note: str) -> None:
+        """Append maintenance record to device state."""
+        if device_id not in self._device_states:
+            raise KeyError(f"Unknown device ID: {device_id}")
+        notes = self._device_states[device_id].setdefault("maintenance_notes", [])
+        notes.append(note)
+
+    def get_device_state(self, device_id: str) -> dict[str, Any]:
+        """Read the current simulation state dictionary for a device."""
+        if device_id not in self._device_states:
+            raise KeyError(f"Unknown device ID: {device_id}")
+        return dict(self._device_states[device_id])
+
 
 def run_cli() -> None:
     """CLI runner supporting speed factor, duration, and dry-run."""
