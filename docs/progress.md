@@ -7,7 +7,7 @@ Update this file at the start and end of every task. Mark a phase DONE only afte
 | 0 | /phase-0-setup | DONE | phase-0-setup | Skeleton, tooling, broker config, CI, ADRs |
 | 1 | /phase-1-simulator | DONE | phase-1-simulator | 20-device MQTT simulator, curves, runner, replay |
 | 2 | /phase-2-faults | DONE | phase-2-faults | 4 injected fault types, pure scheduler, append-only ground truth |
-| 3 | /phase-3-monitor | TODO | | Checkpoint: detection rate at least 80 percent per fault type |
+| 3 | /phase-3-monitor | IN PROGRESS | | Checkpoint: detection rate at least 80 percent per fault type |
 | 4 | /phase-4-agents | TODO | | |
 | 5 | /phase-5-approval-executor | TODO | | |
 | 6 | /phase-6-api-dashboard | TODO | | |
@@ -15,7 +15,7 @@ Update this file at the start and end of every task. Mark a phase DONE only afte
 | 8 | /phase-8-release | TODO | | Tag and push need human approval |
 
 ## Current task
-(none - Phase 2 completed)
+/phase-3-monitor: Deterministic monitor and rule-based baseline
 
 ## Decisions and blockers
 (none)
