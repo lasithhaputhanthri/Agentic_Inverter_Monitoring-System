@@ -14,6 +14,16 @@ from typing import Any, Protocol
 
 from backend.common.config import Settings, load_settings
 from backend.common.errors import ConfigError, LLMTimeoutError, LLMUnavailableError
+from backend.common.logging import get_logger
+
+logger = get_logger(__name__)
+
+FALLBACK_GEMINI_MODELS: tuple[str, ...] = (
+    "gemini-3.1-flash-lite",
+    "gemini-3.8-flash",
+    "gemini-3.5-flash",
+    "gemini-flash-latest",
+)
 
 
 @dataclass(frozen=True)
@@ -110,7 +120,7 @@ class GeminiLLMClient:
     def __init__(
         self,
         api_key: str | None = None,
-        model_name: str = "gemini-2.5-flash",
+        model_name: str = "gemini-3.1-flash-lite",
     ) -> None:
         if not api_key or api_key == "placeholder_llm_api_key":
             raise ConfigError(
@@ -118,6 +128,9 @@ class GeminiLLMClient:
                 "A valid Gemini API key is required when LLM_PROVIDER is 'gemini'. Set LLM_API_KEY in your .env file.",
             )
         self.api_key = api_key
+        # Map deprecated model names to active endpoints
+        if model_name in ("gemini-2.5-flash", "mock-model", ""):
+            model_name = "gemini-3.1-flash-lite"
         self.model_name = model_name
         self._client: Any = None
 
@@ -139,7 +152,7 @@ class GeminiLLMClient:
         max_tokens: int | None = None,
         temperature: float = 0.0,
     ) -> LLMResponse:
-        """Call Google Gemini model and return standardized LLMResponse."""
+        """Call Google Gemini model with automatic fallback across active endpoints."""
         from google.genai import types
 
         start_time = time.time()
@@ -150,17 +163,40 @@ class GeminiLLMClient:
             max_output_tokens=max_tokens or 300,
         )
 
-        try:
-            response = client.models.generate_content(
-                model=self.model_name,
-                contents=prompt,
-                config=config,
-            )
-        except Exception as exc:
-            err_msg = str(exc)
+        models_to_try = [self.model_name]
+        for fb in FALLBACK_GEMINI_MODELS:
+            if fb not in models_to_try:
+                models_to_try.append(fb)
+
+        response = None
+        last_exc: Exception | None = None
+        used_model = self.model_name
+
+        for model in models_to_try:
+            try:
+                response = client.models.generate_content(
+                    model=model,
+                    contents=prompt,
+                    config=config,
+                )
+                used_model = model
+                break
+            except Exception as exc:
+                last_exc = exc
+                logger.warning(
+                    "[GeminiLLMClient] Model '%s' error: %s. Trying next available model...",
+                    model,
+                    exc,
+                )
+                continue
+
+        if response is None:
+            err_msg = str(last_exc)
             if "deadline" in err_msg.lower() or "timeout" in err_msg.lower():
-                raise LLMTimeoutError(f"Gemini API request timed out: {exc}") from exc
-            raise LLMUnavailableError(f"Gemini API request failed: {exc}") from exc
+                raise LLMTimeoutError(f"Gemini API request timed out: {last_exc}") from last_exc
+            raise LLMUnavailableError(
+                f"Gemini API request failed across models: {last_exc}"
+            ) from last_exc
 
         latency_ms = (time.time() - start_time) * 1000.0
         raw_text = response.text or ""
@@ -179,7 +215,7 @@ class GeminiLLMClient:
             text=raw_text,
             input_tokens=in_tok,
             output_tokens=out_tok,
-            model=self.model_name,
+            model=used_model,
             latency_ms=latency_ms,
         )
 
@@ -195,7 +231,7 @@ class ProviderLLMClient:
         if self.provider == "gemini":
             self._delegate: LLMClient = GeminiLLMClient(
                 api_key=self.settings.llm_api_key,
-                model_name=self.settings.llm_model or "gemini-2.5-flash",
+                model_name=self.settings.llm_model or "gemini-3.8-flash",
             )
         elif self.provider == "mock":
             self._delegate = FakeLLMClient(model_name=self.model_name or "mock-model")
@@ -221,6 +257,6 @@ def create_llm_client(settings: Settings | None = None) -> LLMClient:
     if provider == "gemini":
         return GeminiLLMClient(
             api_key=settings.llm_api_key,
-            model_name=settings.llm_model or "gemini-2.5-flash",
+            model_name=settings.llm_model or "gemini-3.8-flash",
         )
     return FakeLLMClient(model_name=settings.llm_model or "mock-model")
