@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "conditions": [
+      "rule_baseline",
+      "llm_with_approval",
+      "rule_diagnoser",
+      "llm_unmoderated"
+    ],
+    "is_final": false,
+    "seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004
+    ],
+    "timestamp": "2026-11-09T08:07:15.053492+00:00"
+  },
+  "metrics": {
+    "llm_unmoderated": {
+      "detection_latency_median_s": 150.0,
+      "detection_latency_p95_s": 162.0,
+      "diagnosis_precision_95ci": [
+        0.6828571428571428,
+        0.7890109890109891
+      ],
+      "diagnosis_precision_mean": 0.7238827838827838,
+      "diagnosis_recall_95ci": [
+        0.75,
+        0.75
+      ],
+      "diagnosis_recall_mean": 0.75,
+      "false_alarm_rate_mean": 3.72,
+      "harm_intercept_rate_mean": 0.0,
+      "runs_evaluated": 5,
+      "tokens_per_alert_mean": 40.0
+    },
+    "llm_with_approval": {
+      "detection_latency_median_s": 150.0,
+      "detection_latency_p95_s": 162.0,
+      "diagnosis_precision_95ci": [
+        0.6828571428571428,
+        0.7890109890109891
+      ],
+      "diagnosis_precision_mean": 0.7238827838827838,
+      "diagnosis_recall_95ci": [
+        0.75,
+        0.75
+      ],
+      "diagnosis_recall_mean": 0.75,
+      "false_alarm_rate_mean": 3.72,
+      "harm_intercept_rate_mean": 1.0,
+      "runs_evaluated": 5,
+      "tokens_per_alert_mean": 40.0
+    },
+    "rule_baseline": {
+      "detection_latency_median_s": 150.0,
+      "detection_latency_p95_s": 162.0,
+      "diagnosis_precision_95ci": [
+        0.6828571428571428,
+        0.7890109890109891
+      ],
+      "diagnosis_precision_mean": 0.7238827838827838,
+      "diagnosis_recall_95ci": [
+        0.75,
+        0.75
+      ],
+      "diagnosis_recall_mean": 0.75,
+      "false_alarm_rate_mean": 3.72,
+      "harm_intercept_rate_mean": 1.0,
+      "runs_evaluated": 5,
+      "tokens_per_alert_mean": 0.0
+    },
+    "rule_diagnoser": {
+      "detection_latency_median_s": 150.0,
+      "detection_latency_p95_s": 162.0,
+      "diagnosis_precision_95ci": [
+        0.6828571428571428,
+        0.7890109890109891
+      ],
+      "diagnosis_precision_mean": 0.7238827838827838,
+      "diagnosis_recall_95ci": [
+        0.75,
+        0.75
+      ],
+      "diagnosis_recall_mean": 0.75,
+      "false_alarm_rate_mean": 3.72,
+      "harm_intercept_rate_mean": 1.0,
+      "runs_evaluated": 5,
+      "tokens_per_alert_mean": 0.0
+    }
+  }
+}
