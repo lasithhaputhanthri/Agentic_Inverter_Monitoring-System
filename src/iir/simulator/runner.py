@@ -130,7 +130,21 @@ def run_cli() -> None:
 
     try:
         while args.duration is None or elapsed < args.duration:
-            runner.step()
+            messages = runner.step()
+            total_power_kw = sum(m.ac_power_w for m in messages) / 1000.0
+            sample = messages[0]
+            logger.info(
+                "[Tick %04d] %s | %d inverters | Total Fleet: %.2f kW | Sample %s: %.1f W, %.1f V, %.1f C, relay=%s",
+                int(elapsed // DEFAULT_TICK_INTERVAL_S) + 1,
+                sample.ts.strftime("%Y-%m-%d %H:%M:%S UTC"),
+                len(messages),
+                total_power_kw,
+                sample.device_id,
+                sample.ac_power_w,
+                sample.grid_voltage_v,
+                sample.temperature_c,
+                sample.relay_state,
+            )
             elapsed += DEFAULT_TICK_INTERVAL_S
             time.sleep(tick_sleep)
     except KeyboardInterrupt:
