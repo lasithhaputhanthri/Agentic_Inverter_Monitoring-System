@@ -1,0 +1,38 @@
+# Guard pattern definitions for output sanitization (SEC-50, rule 50)
+
+block_patterns:
+  - name: "canary_token"
+    regex: "(?i)CANARY-[A-Z0-9_-]{16,}"
+  - name: "stack_trace"
+    regex: 'Traceback \(most recent call last\):'
+  - name: "raw_sql"
+    regex: "(?i)\\b(SELECT\\s+.+\\s+FROM|INSERT\\s+INTO\\s+.+\\s+VALUES|DELETE\\s+FROM|DROP\\s+TABLE|ALTER\\s+TABLE)\\b"
+
+redact_patterns:
+  - name: "api_key"
+    category: "API_KEY"
+    regex: '(?i)(?:bearer\s+[a-zA-Z0-9_\-\.]{20,}|(?:sk|pk|api|key)[-_][a-zA-Z0-9_\-]{16,})'
+  - name: "secret_assignment"
+    category: "SECRET"
+    regex: '(?i)(?:password|client_secret|access_token|secret_key)\s*[:=]\s*["''][^"'']+["'']'
+  - name: "email"
+    category: "EMAIL"
+    regex: '\b[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+\b'
+  - name: "phone"
+    category: "PHONE"
+    regex: '(?:\+94|0094|0)\s*(?:7[0-9]{8}|[1-9][0-9]{8}|[1-9][0-9]{1}[-\s]?[0-9]{7})\b'
+  - name: "street_address"
+    category: "ADDRESS"
+    regex: '\b\d{1,5}\s+[A-Za-z0-9\s,]+(?:Street|St\.|Avenue|Ave\.|Road|Rd\.|Boulevard|Blvd\.|Lane|Ln\.|Drive|Dr\.)\b'
+  - name: "device_serial"
+    category: "SERIAL"
+    regex: '\bINV-SN-[A-Za-z0-9]{8,16}\b'
+  - name: "ip_address"
+    category: "IP_ADDRESS"
+    regex: '\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b'
+  - name: "file_path"
+    category: "FILE_PATH"
+    regex: '(?:\b[A-Za-z]:\\[a-zA-Z0-9_.\-\\]{3,}|/(?:home|etc|var|usr|Users|tmp)/[a-zA-Z0-9_.\-/]+)'
+  - name: "high_entropy"
+    category: "HIGH_ENTROPY"
+    regex: '\b[A-Za-z0-9_-]{32,}\b'
