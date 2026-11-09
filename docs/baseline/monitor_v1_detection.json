@@ -1,0 +1,43 @@
+{
+  "run_id": "detection_eval_42",
+  "simulated_duration_hours": 48.0,
+  "fleet_devices": 20,
+  "total_injected_faults": 40,
+  "total_detected_faults": 36,
+  "overall_detection_rate": 0.9,
+  "by_fault_type": {
+    "overheating": {
+      "injected": 10,
+      "detected": 10,
+      "detection_rate": 1.0,
+      "median_latency_seconds": 165.0,
+      "expected_rule": "temp_high_for_power",
+      "meets_80pct_checkpoint": true
+    },
+    "grid_sag": {
+      "injected": 10,
+      "detected": 10,
+      "detection_rate": 1.0,
+      "median_latency_seconds": 30.0,
+      "expected_rule": "grid_voltage_low",
+      "meets_80pct_checkpoint": true
+    },
+    "relay_stuck": {
+      "injected": 10,
+      "detected": 6,
+      "detection_rate": 0.6,
+      "median_latency_seconds": 15.0,
+      "expected_rule": "relay_mismatch",
+      "meets_80pct_checkpoint": false
+    },
+    "comm_dropout": {
+      "injected": 10,
+      "detected": 10,
+      "detection_rate": 1.0,
+      "median_latency_seconds": 60.0,
+      "expected_rule": "device_silent",
+      "meets_80pct_checkpoint": true
+    }
+  },
+  "checkpoint_all_types_ge_80pct": false
+}
