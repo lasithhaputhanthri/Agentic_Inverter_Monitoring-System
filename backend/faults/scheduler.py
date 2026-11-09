@@ -165,6 +165,32 @@ def plan_faults(
             if not free_slots:
                 continue
 
+            # For relay stuck faults, prefer daylight generation hours when power > 200 W is physically active
+            if ft == FaultType.RELAY_STUCK:
+                daylight_slots: list[tuple[float, float]] = []
+                days_count = int(total_window_s // 86400) + 2
+                daylight_windows: list[tuple[float, float]] = []
+                for day_idx in range(days_count):
+                    base_day = (start_utc + timedelta(days=day_idx)).replace(
+                        hour=0, minute=0, second=0, microsecond=0
+                    )
+                    d_start_dt = base_day.replace(hour=8, minute=0)
+                    d_end_dt = base_day.replace(hour=16, minute=30)
+                    w_start = max(0.0, (d_start_dt - start_utc).total_seconds())
+                    w_end = min(total_window_s - duration, (d_end_dt - start_utc).total_seconds())
+                    if w_start < w_end:
+                        daylight_windows.append((w_start, w_end))
+
+                for s_start, s_end in free_slots:
+                    for dw_start, dw_end in daylight_windows:
+                        inter_start = max(s_start, dw_start)
+                        inter_end = min(s_end, dw_end)
+                        if inter_start < inter_end:
+                            daylight_slots.append((inter_start, inter_end))
+
+                if daylight_slots:
+                    free_slots = daylight_slots
+
             # Pick a slot proportional to length
             total_free = sum(slot_end - slot_start for slot_start, slot_end in free_slots)
             if total_free <= 0:
