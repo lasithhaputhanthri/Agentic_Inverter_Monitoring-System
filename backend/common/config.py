@@ -66,6 +66,20 @@ class MqttSettings(BaseModel):
     max_payload_bytes: int = 2048
 
 
+class MonitorConfig(BaseModel):
+    """Deterministic monitor rule thresholds, cooldowns, and window sizes."""
+
+    temp_delta_c: float = 12.0
+    temp_consecutive_readings: int = 3
+    grid_voltage_threshold_v: float = 207.0
+    grid_voltage_consecutive_readings: int = 3
+    relay_mismatch_power_w: float = 200.0
+    relay_consecutive_readings: int = 2
+    device_silent_timeout_s: float = 60.0
+    cooldown_seconds: float = 300.0
+    window_size: int = 10
+
+
 REQUIRED_SECRETS: tuple[str, ...] = (
     "MQTT_PASSWORD",
     "API_KEY_PEPPER",
@@ -98,6 +112,7 @@ class Settings(BaseSettings):
     tokens: TokensConfig = Field(default_factory=TokensConfig)
     load: LoadConfig = Field(default_factory=LoadConfig)
     mqtt: MqttSettings = Field(default_factory=MqttSettings)
+    monitor: MonitorConfig = Field(default_factory=MonitorConfig)
 
 
 def load_yaml_config(path: Path | str) -> dict[str, Any]:

@@ -33,3 +33,14 @@ mqtt:
   tls: false
   qos: 1
   max_payload_bytes: 2048
+
+monitor:
+  temp_delta_c: 12.0
+  temp_consecutive_readings: 3
+  grid_voltage_threshold_v: 207.0
+  grid_voltage_consecutive_readings: 3
+  relay_mismatch_power_w: 200.0
+  relay_consecutive_readings: 2
+  device_silent_timeout_s: 60.0
+  cooldown_seconds: 300.0
+  window_size: 10

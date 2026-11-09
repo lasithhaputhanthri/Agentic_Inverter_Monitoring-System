@@ -28,3 +28,9 @@ class FaultPlanError(IIRError):
     """Raised when fault planning encounters invalid parameters, overlapping faults, or unknown device IDs."""
 
     pass
+
+
+class MonitorError(IIRError):
+    """Raised when monitoring detects unknown devices or invalid operational state."""
+
+    pass
