@@ -12,10 +12,10 @@ Update this file at the start and end of every task. Mark a phase DONE only afte
 | 5 | /phase-5-approval-executor | DONE | phase-5-approval-executor | LangGraph workflow, policy allowlist, approval gate, isolated executor, append-only audit |
 | 6 | /phase-6-api-dashboard | DONE | phase-6-api-dashboard | SQLAlchemy 2.x storage, Alembic migrations, authenticated rate-limited API, output guard, Streamlit dashboard |
 | 7 | /phase-7-evaluation | DONE | phase-7-evaluation | 100-seed held-out evaluation, harm interception validation, metrics report |
-| 8 | /phase-8-release | TODO | | Tag and push need human approval |
+| 8 | /phase-8-release | DONE | | Final write-up, documentation, demo walkthrough, security controls audit |
 
 ## Current task
-Phase 7 complete. Ready for Phase 8 (Release packaging, final verification, documentation).
+/phase-8-release: Completed README, security mapping docs, demo scripts, interview notes, and final release review. Awaiting human confirmation before tag/push.
 
 ## Decisions and blockers
-(none)
+CHECKPOINT: Human approval required before creating git release tag `v1.0.0` or running `git push`.
