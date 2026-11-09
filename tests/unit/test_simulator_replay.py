@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from iir.simulator.replay import compute_file_sha256, replay_telemetry, write_simulation_run
+from simulator.replay import compute_file_sha256, replay_telemetry, write_simulation_run
 
 
 def test_replay_byte_identical_reproducibility(tmp_path: Path) -> None:

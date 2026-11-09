@@ -59,64 +59,81 @@ def get_project_root() -> Path:
 
 
 def test_architecture_dependency_rules() -> None:
-    """Validate all architectural dependency constraints from 10-architecture.md."""
+    """Validate all architectural dependency constraints for backend and simulator."""
     root = get_project_root()
-    src_dir = root / "src" / "iir"
+    backend_dir = root / "backend"
+    simulator_dir = root / "simulator"
     tests_dir = root / "tests"
 
-    records = collect_imports(src_dir) + collect_imports(tests_dir)
+    records = (
+        collect_imports(backend_dir) + collect_imports(simulator_dir) + collect_imports(tests_dir)
+    )
     violations: list[str] = []
 
     for rec in records:
         rel_path = rec.source_file.relative_to(root).as_posix()
         imported = rec.imported_module
 
-        # Normalize relative imports inside iir
-        # Rule 1: common imports nothing from the project
-        if rel_path.startswith("src/iir/common/"):
-            if imported.startswith("iir.") and not imported.startswith("iir.common"):
+        # Rule 1: common imports nothing from the project outside backend.common
+        if rel_path.startswith("backend/common/"):
+            if imported.startswith("backend.") and not imported.startswith("backend.common"):
+                violations.append(
+                    f"Rule 1 violation in {rel_path}:{rec.line}: common cannot import {imported}"
+                )
+            if imported.startswith("simulator"):
                 violations.append(
                     f"Rule 1 violation in {rel_path}:{rec.line}: common cannot import {imported}"
                 )
 
         # Rule 2: monitor must not import agents, workflow, or faults
-        if rel_path.startswith("src/iir/monitor/"):
-            forbidden_monitor: tuple[str, ...] = ("iir.agents", "iir.workflow", "iir.faults")
+        if rel_path.startswith("backend/monitor/"):
+            forbidden_monitor: tuple[str, ...] = (
+                "backend.agents",
+                "backend.workflow",
+                "backend.faults",
+            )
             if any(imported == f or imported.startswith(f + ".") for f in forbidden_monitor):
                 violations.append(
                     f"Rule 2 violation in {rel_path}:{rec.line}: monitor cannot import {imported}"
                 )
 
         # Rule 3: api and dashboard must not import simulator, faults, or executor
-        if rel_path.startswith("src/iir/api/") or rel_path.startswith("src/iir/dashboard/"):
-            forbidden_api: tuple[str, ...] = ("iir.simulator", "iir.faults", "iir.executor")
+        if rel_path.startswith("backend/api/") or rel_path.startswith("backend/dashboard/"):
+            forbidden_api: tuple[str, ...] = ("simulator", "backend.faults", "backend.executor")
             if any(imported == f or imported.startswith(f + ".") for f in forbidden_api):
                 violations.append(
                     f"Rule 3 violation in {rel_path}:{rec.line}: api/dashboard cannot import {imported}"
                 )
 
         # Rule 4: dashboard must not import storage. It calls the API only.
-        if rel_path.startswith("src/iir/dashboard/"):
-            forbidden_dash: tuple[str, ...] = ("iir.storage",)
+        if rel_path.startswith("backend/dashboard/"):
+            forbidden_dash: tuple[str, ...] = ("backend.storage",)
             if any(imported == f or imported.startswith(f + ".") for f in forbidden_dash):
                 violations.append(
                     f"Rule 4 violation in {rel_path}:{rec.line}: dashboard cannot import {imported}"
                 )
 
         # Rule 5: evaluation is imported by nothing at runtime
-        if rel_path.startswith("src/iir/") and not rel_path.startswith("src/iir/evaluation/"):
-            forbidden_eval: tuple[str, ...] = ("iir.evaluation",)
+        if rel_path.startswith("backend/") and not rel_path.startswith("backend/evaluation/"):
+            forbidden_eval: tuple[str, ...] = ("backend.evaluation",)
             if any(imported == f or imported.startswith(f + ".") for f in forbidden_eval):
                 violations.append(
                     f"Rule 5 violation in {rel_path}:{rec.line}: runtime code cannot import {imported}"
                 )
 
         # Rule 6: Only evaluation and tests may read faults.groundtruth
-        if not (rel_path.startswith("src/iir/evaluation/") or rel_path.startswith("tests/")):
-            forbidden_gt: tuple[str, ...] = ("iir.faults.groundtruth",)
+        if not (rel_path.startswith("backend/evaluation/") or rel_path.startswith("tests/")):
+            forbidden_gt: tuple[str, ...] = ("backend.faults.groundtruth",)
             if any(imported == f or imported.startswith(f + ".") for f in forbidden_gt):
                 violations.append(
                     f"Rule 6 violation in {rel_path}:{rec.line}: only evaluation/tests may import {imported}"
+                )
+
+        # Rule 7: backend runtime modules must not import simulator (decoupled systems)
+        if rel_path.startswith("backend/"):
+            if imported == "simulator" or imported.startswith("simulator."):
+                violations.append(
+                    f"Rule 7 violation in {rel_path}:{rec.line}: backend cannot import simulator ({imported})"
                 )
 
     assert not violations, "Architecture dependency violations detected:\n" + "\n".join(violations)

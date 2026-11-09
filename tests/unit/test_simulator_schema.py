@@ -10,9 +10,8 @@ from __future__ import annotations
 from datetime import UTC, datetime
 
 import pytest
+from backend.common.schemas import TelemetryMessage
 from pydantic import ValidationError
-
-from iir.common.schemas import TelemetryMessage
 
 
 def test_temperature_500_rejected() -> None:

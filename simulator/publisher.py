@@ -8,10 +8,9 @@ Outputs: Published messages on MQTT topics with QoS 1, or refused oversized payl
 from __future__ import annotations
 
 import paho.mqtt.client as mqtt
-
-from iir.common.config import Settings
-from iir.common.logging import get_logger
-from iir.common.schemas import TelemetryMessage
+from backend.common.config import Settings
+from backend.common.logging import get_logger
+from backend.common.schemas import TelemetryMessage
 
 logger = get_logger(__name__)
 

@@ -12,10 +12,9 @@ from datetime import UTC, datetime
 from unittest.mock import MagicMock
 
 import pytest
-
-from iir.common.config import LimitsConfig, LoadConfig, MqttSettings, Settings, TokensConfig
-from iir.common.schemas import TelemetryMessage
-from iir.simulator.publisher import PayloadSizeError, TelemetryPublisher
+from backend.common.config import LimitsConfig, LoadConfig, MqttSettings, Settings, TokensConfig
+from backend.common.schemas import TelemetryMessage
+from simulator.publisher import PayloadSizeError, TelemetryPublisher
 
 
 def create_test_settings(password: str = "secret_broker_password_12345") -> Settings:

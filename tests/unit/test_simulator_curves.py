@@ -7,7 +7,7 @@ Outputs: Assertion checks on curve continuity, peaks, and monotonic rise/fall.
 
 from __future__ import annotations
 
-from iir.simulator.curves import irradiance_factor
+from simulator.curves import irradiance_factor
 
 
 def test_irradiance_factor_night_and_peak() -> None:

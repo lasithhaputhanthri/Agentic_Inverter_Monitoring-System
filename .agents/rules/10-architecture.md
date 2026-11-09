@@ -1,15 +1,20 @@
 # Architecture rules (always apply)
 
 ## Layout
-Code lives in `src/iir/` with these packages: common, simulator, faults, monitor, agents, workflow, executor, guard, limits, storage, api, dashboard, evaluation. Tests live in `tests/unit`, `tests/integration`, `tests/security`, and `tests/eval`.
+Code lives across 3 main subsystems:
+- `simulator/`: Inverter fleet devices, solar curves, telemetry generator, command listener (MQTT/Modbus), runner, and replay.
+- `backend/`: Core incident response services (common, monitor, faults, agents, workflow, executor, guard, limits, storage, api, evaluation).
+- `frontend/`: Operator dashboard client (Phase 6).
+Tests live in `tests/unit`, `tests/integration`, `tests/security`, and `tests/eval`.
 
 ## Dependency direction (enforced by `tests/unit/test_dependency_rules.py`)
-- `common` imports nothing from the project.
-- `monitor` must not import `agents`, `workflow`, or `faults`.
-- `api` and `dashboard` must not import `simulator`, `faults`, or `executor`.
-- `dashboard` must not import `storage`. It calls the API only.
+- `backend.common` imports nothing from the project outside `backend.common`.
+- `backend.monitor` must not import `agents`, `workflow`, or `faults`.
+- `backend.api` and `backend.dashboard` must not import `simulator`, `faults`, or `executor`.
+- `backend.dashboard` must not import `storage`. It calls the API only.
 - `evaluation` is imported by nothing at runtime.
 - Only `evaluation` and `tests` may read `faults.groundtruth`.
+- `backend` runtime modules must not import `simulator` directly (enforcing decoupled systems).
 
 If a change needs to break one of these rules, stop and ask the human.
 

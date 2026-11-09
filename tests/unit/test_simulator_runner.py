@@ -9,9 +9,9 @@ from __future__ import annotations
 
 from datetime import UTC, datetime
 
-from iir.common.clock import FakeClock
-from iir.simulator.devices import make_fleet
-from iir.simulator.runner import DEFAULT_TICK_INTERVAL_S, SimulationRunner
+from backend.common.clock import FakeClock
+from simulator.devices import make_fleet
+from simulator.runner import DEFAULT_TICK_INTERVAL_S, SimulationRunner
 
 
 def test_24_hour_run_message_count() -> None:

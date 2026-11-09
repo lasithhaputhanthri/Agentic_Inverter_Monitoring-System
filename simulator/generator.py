@@ -11,14 +11,15 @@ import random
 from datetime import datetime
 from typing import Any
 
-from iir.common.schemas import RelayState, TelemetryMessage
-from iir.simulator.curves import (
+from backend.common.schemas import RelayState, TelemetryMessage
+
+from simulator.curves import (
     SUNRISE_HOUR,
     SUNSET_HOUR,
     expected_power,
     expected_temperature,
 )
-from iir.simulator.devices import DeviceProfile
+from simulator.devices import DeviceProfile
 
 NOMINAL_GRID_VOLTAGE_V: float = 230.0
 PANEL_VMP_V: float = 34.0

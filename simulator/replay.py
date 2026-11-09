@@ -12,10 +12,11 @@ from collections.abc import Iterator
 from datetime import UTC, datetime
 from pathlib import Path
 
-from iir.common.clock import FakeClock
-from iir.common.schemas import TelemetryMessage
-from iir.simulator.devices import make_fleet
-from iir.simulator.runner import DEFAULT_TICK_INTERVAL_S, SimulationRunner
+from backend.common.clock import FakeClock
+from backend.common.schemas import TelemetryMessage
+
+from simulator.devices import make_fleet
+from simulator.runner import DEFAULT_TICK_INTERVAL_S, SimulationRunner
 
 
 def compute_file_sha256(path: Path | str) -> str:

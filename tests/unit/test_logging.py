@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import logging
 
-from iir.common.logging import RedactingFilter, redact_text
+from backend.common.logging import RedactingFilter, redact_text
 
 
 def test_redacting_filter_redacts_password_assignment() -> None:

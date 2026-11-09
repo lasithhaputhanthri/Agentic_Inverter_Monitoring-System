@@ -1,9 +1,11 @@
 # Mosquitto Access Control List (ACL) for IIR fleet
 
-# Simulator publishes telemetry only to fleet/#
+# Simulator publishes telemetry and listens for read/poll commands
 user simulator
 topic write fleet/#
+topic read fleet/inverter/+/command
 
-# Monitor subscribes only to fleet/#
+# Backend / Monitor reads telemetry and issues read/poll commands
 user monitor
 topic read fleet/#
+topic write fleet/inverter/+/command

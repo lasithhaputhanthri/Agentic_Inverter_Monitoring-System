@@ -8,9 +8,8 @@ Outputs: Assertion checks on ConfigError and Settings contents.
 from __future__ import annotations
 
 import pytest
-
-from iir.common.config import REQUIRED_SECRETS, load_settings
-from iir.common.errors import ConfigError
+from backend.common.config import REQUIRED_SECRETS, load_settings
+from backend.common.errors import ConfigError
 
 
 def test_missing_secret_raises_config_error_without_value() -> None:

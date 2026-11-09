@@ -15,7 +15,7 @@ import yaml
 from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-from iir.common.errors import ConfigError
+from backend.common.errors import ConfigError
 
 
 class LimitsConfig(BaseModel):

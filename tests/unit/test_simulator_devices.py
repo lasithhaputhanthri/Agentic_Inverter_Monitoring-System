@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import re
 
-from iir.simulator.devices import make_fleet
+from simulator.devices import make_fleet
 
 
 def test_make_fleet_uniqueness_and_reproducibility() -> None:

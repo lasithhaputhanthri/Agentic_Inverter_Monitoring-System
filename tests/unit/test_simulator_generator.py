@@ -13,10 +13,10 @@ import random
 from datetime import UTC, datetime
 from pathlib import Path
 
-from iir.common.schemas import TelemetryMessage
-from iir.simulator import generator
-from iir.simulator.devices import make_fleet
-from iir.simulator.generator import next_telemetry
+from backend.common.schemas import TelemetryMessage
+from simulator import generator
+from simulator.devices import make_fleet
+from simulator.generator import next_telemetry
 
 
 def test_generator_validates_1000_messages() -> None:

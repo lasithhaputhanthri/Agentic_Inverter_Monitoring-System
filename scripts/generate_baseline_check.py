@@ -10,7 +10,7 @@ from __future__ import annotations
 from collections import defaultdict
 from pathlib import Path
 
-from iir.simulator.replay import compute_file_sha256, replay_telemetry, write_simulation_run
+from simulator.replay import compute_file_sha256, replay_telemetry, write_simulation_run
 
 
 def generate_baseline() -> tuple[str, Path]:

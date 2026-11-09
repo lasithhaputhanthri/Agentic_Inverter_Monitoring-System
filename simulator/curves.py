@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import math
 
-from iir.simulator.devices import DeviceProfile
+from simulator.devices import DeviceProfile
 
 SUNRISE_HOUR: float = 6.0
 SUNSET_HOUR: float = 19.0

@@ -14,13 +14,14 @@ from collections.abc import Callable
 from datetime import timedelta
 from typing import Any
 
-from iir.common.clock import Clock, FakeClock, SystemClock
-from iir.common.config import load_settings
-from iir.common.logging import configure_logging, get_logger
-from iir.common.schemas import TelemetryMessage
-from iir.simulator.devices import DeviceProfile, make_fleet
-from iir.simulator.generator import next_telemetry
-from iir.simulator.publisher import TelemetryPublisher
+from backend.common.clock import Clock, FakeClock, SystemClock
+from backend.common.config import load_settings
+from backend.common.logging import configure_logging, get_logger
+from backend.common.schemas import TelemetryMessage
+
+from simulator.devices import DeviceProfile, make_fleet
+from simulator.generator import next_telemetry
+from simulator.publisher import TelemetryPublisher
 
 logger = get_logger(__name__)
 
