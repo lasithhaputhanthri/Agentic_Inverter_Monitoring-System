@@ -34,6 +34,9 @@ services:
       - mosquitto
 
   simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: iir-app:latest
     container_name: iir-simulator
     restart: unless-stopped
@@ -49,6 +52,9 @@ services:
       - backend
 
   frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: iir-app:latest
     container_name: iir-frontend
     restart: unless-stopped
