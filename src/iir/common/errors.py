@@ -1,0 +1,24 @@
+"""Error definitions for the IIR system.
+
+Purpose: Provide typed exceptions for failure modes across the application.
+Inputs: Error messages and context parameters.
+Outputs: Custom exception instances inheriting from IIRError.
+"""
+
+
+class IIRError(Exception):
+    """Base exception for all errors raised within the IIR application."""
+
+    pass
+
+
+class ConfigError(IIRError):
+    """Raised when configuration validation fails or a required secret is missing.
+
+    Ensures that missing secrets name the missing variable without leaking values.
+    """
+
+    def __init__(self, variable_name: str, message: str | None = None) -> None:
+        self.variable_name = variable_name
+        detail = message or f"Missing required configuration secret: {variable_name}"
+        super().__init__(detail)

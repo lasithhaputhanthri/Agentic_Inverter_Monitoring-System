@@ -1,0 +1,35 @@
+limits:
+  requests_per_minute_per_key: 60
+  requests_per_day_per_key: 2000
+  llm_calls_per_day_per_key: 200
+  concurrent_jobs_per_key: 2
+  max_request_body_bytes: 16384
+  max_free_text_chars: 4000
+  list_limit_clamp: 200
+
+tokens:
+  per_run_budget: 200000
+  per_day_global_budget: 1000000
+  diagnosis_output_cap: 300
+  diagnosis_input_cap: 1500
+  remediation_output_cap: 200
+  remediation_input_cap: 800
+
+load:
+  max_concurrent_llm_calls: 4
+  alert_queue_max_size: 50
+  alert_cooldown_seconds: 300
+  provider_max_retries: 3
+  circuit_breaker_consecutive_failures: 5
+  circuit_breaker_failure_window_seconds: 60
+  circuit_breaker_open_duration_seconds: 60
+  llm_timeout_seconds: 20
+  db_timeout_seconds: 10
+  diagnosis_cache_ttl_hours: 24
+
+mqtt:
+  host: "localhost"
+  port: 1883
+  tls: false
+  qos: 1
+  max_payload_bytes: 2048
