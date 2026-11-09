@@ -1,0 +1,27 @@
+# Pinned lockfile for IIR
+# Generated for reproducible dependency installation
+bandit==1.8.3
+CacheControl==0.14.4
+cyclonedx-python-lib==8.9.0
+fastapi==0.162.2
+langchain-core==1.7.6
+langgraph==1.2.20
+langgraph-checkpoint==4.3.1
+langgraph-sdk==0.4.13
+mypy==1.15.0
+mypy_extensions==1.2.0
+paho-mqtt==2.1.0
+pip-api==0.0.35
+pip-audit==2.8.0
+pip-requirements-parser==32.0.1
+pydantic==2.14.2
+pydantic-settings==2.6.1
+pydantic_core==2.50.2
+pytest==9.2.0
+pytest-asyncio==1.4.1.post1
+PyYAML==6.0.3
+ruff==0.9.9
+SQLAlchemy==2.1.8
+starlette==1.10.0
+stevedore==5.9.1
+typing_extensions==4.16.0

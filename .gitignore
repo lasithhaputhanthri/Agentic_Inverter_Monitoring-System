@@ -1,0 +1,39 @@
+# Environments & Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Data directories (Hard boundary 1 & SEC-60)
+data/raw/
+data/eval/
+data/
+
+# Mosquitto credentials
+config/mosquitto/password_file
+config/mosquitto/password_file.*
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Python cache & build
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.venv/
+env/
+venv/
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Logs
+*.log

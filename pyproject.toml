@@ -1,0 +1,93 @@
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iir"
+version = "0.1.0"
+description = "IoT Incident Response (simulated solar inverter fleet)"
+authors = [{ name = "Lasith Haputhanthri" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic==2.14.2",
+    "pydantic-settings==2.6.1",
+    "paho-mqtt==2.1.0",
+    "fastapi==0.162.2",
+    "sqlalchemy==2.1.8",
+    "langgraph==1.2.20",
+    "pyyaml==6.0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.2.0",
+    "pytest-asyncio==1.4.1.post1",
+    "ruff==0.9.9",
+    "mypy==1.15.0",
+    "bandit==1.8.3",
+    "pip-audit==2.8.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501", # line length handled by formatter
+]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+check_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["iir.common.*", "iir.monitor.*"]
+disallow_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_return_any = true
+no_implicit_reexport = true
+strict_equality = true
+extra_checks = true
+
+[[tool.mypy.overrides]]
+module = ["paho.*", "pydantic.*", "pydantic_settings.*", "yaml.*", "fastapi.*", "sqlalchemy.*", "langgraph.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests requiring broker or external services",
+    "security: Security tests",
+    "eval: Evaluation and benchmark tests",
+]
+
+[tool.bandit]
+exclude_dirs = ["tests", "data", ".venv", ".mypy_cache", ".pytest_cache"]
+skips = ["B101"] # assert used in tests / validation
