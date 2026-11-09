@@ -13,9 +13,11 @@ services:
   backend:
     build:
       context: .
-      target: backend
+      dockerfile: Dockerfile
+    image: iir-app:latest
     container_name: iir-backend
     restart: unless-stopped
+    command: ["uvicorn", "backend.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
     ports:
       - "8000:8000"
     env_file:
@@ -32,11 +34,10 @@ services:
       - mosquitto
 
   simulator:
-    build:
-      context: .
-      target: simulator
+    image: iir-app:latest
     container_name: iir-simulator
     restart: unless-stopped
+    command: ["python", "-m", "simulator.runner", "--devices", "20", "--speed", "1.0"]
     env_file:
       - path: .env
         required: false
@@ -45,13 +46,13 @@ services:
       - MQTT_PORT=1883
     depends_on:
       - mosquitto
+      - backend
 
   frontend:
-    build:
-      context: .
-      target: frontend
+    image: iir-app:latest
     container_name: iir-frontend
     restart: unless-stopped
+    command: ["streamlit", "run", "frontend/dashboard/app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]
     ports:
       - "8501:8501"
     env_file:

@@ -1,7 +1,7 @@
 # ==============================================================================
-# Multi-stage Dockerfile for IoT Incident Response System
+# Dockerfile for IoT Incident Response System (Single Unified Image)
 # ==============================================================================
-FROM python:3.11-slim AS base
+FROM python:3.11-slim
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1
 
-# Install runtime tools
+# Install runtime utilities
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
@@ -22,22 +22,8 @@ RUN pip install --no-cache-dir -r requirements.lock && \
 # Copy application source code
 COPY . .
 
-# ------------------------------------------------------------------------------
-# Target: Backend API Server (FastAPI on Port 8000)
-# ------------------------------------------------------------------------------
-FROM base AS backend
-EXPOSE 8000
+# Expose backend API (8000) and frontend dashboard (8501)
+EXPOSE 8000 8501
+
+# Default command starts backend API
 CMD ["uvicorn", "backend.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
-
-# ------------------------------------------------------------------------------
-# Target: Frontend Operator Dashboard (Streamlit on Port 8501)
-# ------------------------------------------------------------------------------
-FROM base AS frontend
-EXPOSE 8501
-CMD ["streamlit", "run", "frontend/dashboard/app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]
-
-# ------------------------------------------------------------------------------
-# Target: Inverter Fleet Telemetry Simulator
-# ------------------------------------------------------------------------------
-FROM base AS simulator
-CMD ["python", "-m", "simulator.runner", "--devices", "20", "--speed", "1.0"]
