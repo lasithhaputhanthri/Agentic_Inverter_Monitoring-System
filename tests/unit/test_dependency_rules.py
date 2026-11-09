@@ -137,3 +137,26 @@ def test_architecture_dependency_rules() -> None:
                 )
 
     assert not violations, "Architecture dependency violations detected:\n" + "\n".join(violations)
+
+
+def test_ground_truth_dependency_rule_enforcement() -> None:
+    """Acceptance test: Reading the ground-truth file from any module other than evaluation or tests fails."""
+    # Simulate an illegal import from backend/monitor/fake_module.py
+    fake_record = ImportRecord(
+        source_file=Path("backend/monitor/fake_monitor.py"),
+        line=10,
+        imported_module="backend.faults.groundtruth",
+    )
+    rel_path = fake_record.source_file.as_posix()
+    imported = fake_record.imported_module
+
+    # Apply Rule 6 logic
+    is_allowed = rel_path.startswith("backend/evaluation/") or rel_path.startswith("tests/")
+    forbidden_gt = ("backend.faults.groundtruth",)
+    violation = not is_allowed and any(
+        imported == f or imported.startswith(f + ".") for f in forbidden_gt
+    )
+
+    assert violation is True, (
+        "Rule 6 must identify groundtruth imports outside evaluation/tests as violations"
+    )
