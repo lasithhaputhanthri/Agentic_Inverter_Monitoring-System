@@ -1,7 +1,7 @@
 # ADR 0004: Monitor Calibration and Relay Mismatch Checkpoint Resolution
 
 ## Status
-Proposed (Pending Human Approval at Phase 3 Checkpoint)
+Accepted (Approved by Human Operator, Verified via Baseline Runs)
 
 ## Context
 During Phase 3 baseline evaluation against 40 injected faults across a 20-device fleet over 48 hours:
