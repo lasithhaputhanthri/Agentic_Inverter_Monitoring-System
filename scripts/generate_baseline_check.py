@@ -63,14 +63,16 @@ def generate_baseline() -> tuple[str, Path]:
             f"| {dev_id} | {peak_power_w[dev_id]:.1f} | {daily_kwh:.2f} | {message_count[dev_id]} |"
         )
 
-    lines.extend([
-        "",
-        f"**Total Fleet Daily Energy Generated**: {total_fleet_energy_kwh:.2f} kWh",
-        "",
-        "## Checkpoint Evaluation",
-        "All 20 devices follow the expected diurnal solar curve without anomalies.",
-        "Zero site-specific or confidential operational data is included.",
-    ])
+    lines.extend(
+        [
+            "",
+            f"**Total Fleet Daily Energy Generated**: {total_fleet_energy_kwh:.2f} kWh",
+            "",
+            "## Checkpoint Evaluation",
+            "All 20 devices follow the expected diurnal solar curve without anomalies.",
+            "Zero site-specific or confidential operational data is included.",
+        ]
+    )
 
     out_doc.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote baseline metrics to {out_doc}")
