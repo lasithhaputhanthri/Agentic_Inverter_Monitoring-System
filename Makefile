@@ -1,4 +1,4 @@
-.PHONY: install lint type test security check run broker-users
+.PHONY: install lint type test security check run broker-users create-key
 
 PYTHON ?= python
 
@@ -7,8 +7,8 @@ install:
 	$(PYTHON) -m pip install -e ".[dev]"
 
 lint:
-	ruff check simulator backend tests
-	ruff format --check simulator backend tests
+	ruff check simulator backend tests scripts frontend
+	ruff format --check simulator backend tests scripts frontend
 
 type:
 	mypy simulator backend tests
@@ -29,3 +29,6 @@ run:
 
 broker-users:
 	$(PYTHON) scripts/broker_users.py
+
+create-key:
+	$(PYTHON) scripts/create_key.py --role $(ROLE) --label $(LABEL)

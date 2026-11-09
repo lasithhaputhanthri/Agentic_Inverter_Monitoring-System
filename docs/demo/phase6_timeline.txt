@@ -1,0 +1,8 @@
+# Incident Response Workflow Phase 6 Timeline Dump
+# Device: INV-05 | Alert ID: 78c2d685-cf48-41ba-9a49-ae17d5a89764
+# ----------------------------------------------------------------------
+[2026-11-09T10:00:00] [ALERT] Alert temp_high_for_power (critical): observed 68.5 C
+[2026-11-09T10:00:10] [DIAGNOSIS] Diagnosed cause 'overheating' with 96% confidence
+[2026-11-09T10:00:20] [PROPOSAL] Proposed action 'curtail_50': Inverter overheating; curtailing active output power by 50% 
+[2026-11-09T10:01:00] [APPROVAL] Operator 'operator_jane' APPROVE: Thermal risk confirmed. Curtailment approved.
+[2026-11-09T10:01:10] [EXECUTION] Action 'curtail_50' status 'executed'
