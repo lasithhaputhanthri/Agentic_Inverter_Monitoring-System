@@ -4,13 +4,13 @@
   "fleet_devices": 20,
   "device_days": 20.0,
   "total_telemetry_messages": 115200,
-  "total_alerts": 416,
-  "alerts_per_device_day": 20.8,
+  "total_alerts": 0,
+  "alerts_per_device_day": 0.0,
   "alerts_by_rule": {
-    "temp_high_for_power": 416,
+    "temp_high_for_power": 0,
     "grid_voltage_low": 0,
     "relay_mismatch": 0,
     "device_silent": 0
   },
-  "status": "WARNING"
+  "status": "PASS"
 }
