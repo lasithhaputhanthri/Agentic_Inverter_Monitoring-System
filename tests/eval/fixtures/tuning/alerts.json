@@ -2,7 +2,7 @@
   {
     "item_id": "ITEM-0001",
     "alert": {
-      "alert_id": "aa847451-26ac-4dc5-bdb3-d417335bdca0",
+      "alert_id": "0d8a7f27-3f61-53e5-9848-4e843f859d82",
       "device_id": "INV-01",
       "ts": "2026-06-01T12:15:00Z",
       "rule": "temp_high_for_power",
@@ -17,7 +17,7 @@
   {
     "item_id": "ITEM-0002",
     "alert": {
-      "alert_id": "608f7eee-b8d1-4e3b-bd5d-e1d32646a4d5",
+      "alert_id": "ad5666fd-552f-545b-bd22-f582f1a33bbe",
       "device_id": "INV-02",
       "ts": "2026-06-01T12:30:00Z",
       "rule": "temp_high_for_power",
@@ -32,7 +32,7 @@
   {
     "item_id": "ITEM-0003",
     "alert": {
-      "alert_id": "fe76d678-095b-46d5-9328-78ac4cdb1c23",
+      "alert_id": "3b2ece6d-e793-5e14-9869-fd8f9c1d040e",
       "device_id": "INV-03",
       "ts": "2026-06-01T12:45:00Z",
       "rule": "temp_high_for_power",
@@ -47,7 +47,7 @@
   {
     "item_id": "ITEM-0004",
     "alert": {
-      "alert_id": "f55be037-d9b5-43e1-acec-7c2b92268425",
+      "alert_id": "8023a424-eb9f-5a31-85e3-d1adeeeb8617",
       "device_id": "INV-04",
       "ts": "2026-06-01T13:00:00Z",
       "rule": "temp_high_for_power",
@@ -62,7 +62,7 @@
   {
     "item_id": "ITEM-0005",
     "alert": {
-      "alert_id": "6e2382fd-a23e-4d67-a57f-7b0669f57958",
+      "alert_id": "efecfdc5-0a10-5e81-807d-f6059dd817ab",
       "device_id": "INV-05",
       "ts": "2026-06-01T13:15:00Z",
       "rule": "temp_high_for_power",
@@ -77,7 +77,7 @@
   {
     "item_id": "ITEM-0006",
     "alert": {
-      "alert_id": "24a93865-ffa9-4a78-95fd-fb49596e57ee",
+      "alert_id": "64da2a75-cb76-52ae-b31a-adb3233e1b64",
       "device_id": "INV-06",
       "ts": "2026-06-01T13:30:00Z",
       "rule": "temp_high_for_power",
@@ -92,7 +92,7 @@
   {
     "item_id": "ITEM-0007",
     "alert": {
-      "alert_id": "ff66d0ea-2892-4c5d-b129-56d4a3b03cda",
+      "alert_id": "97dd45c1-0893-593c-974c-25824d8efec3",
       "device_id": "INV-07",
       "ts": "2026-06-01T13:45:00Z",
       "rule": "temp_high_for_power",
@@ -107,7 +107,7 @@
   {
     "item_id": "ITEM-0008",
     "alert": {
-      "alert_id": "307d6b03-1575-4217-a943-ad501f077de7",
+      "alert_id": "321f249c-8afc-5646-85da-71e8b43f1995",
       "device_id": "INV-08",
       "ts": "2026-06-01T14:00:00Z",
       "rule": "temp_high_for_power",
@@ -122,7 +122,7 @@
   {
     "item_id": "ITEM-0009",
     "alert": {
-      "alert_id": "97115f3c-9e33-475d-a93f-df3d3bca3181",
+      "alert_id": "ef7c94d7-ec01-55e3-b0df-b5f83c2e2306",
       "device_id": "INV-09",
       "ts": "2026-06-01T14:15:00Z",
       "rule": "temp_high_for_power",
@@ -137,7 +137,7 @@
   {
     "item_id": "ITEM-0010",
     "alert": {
-      "alert_id": "f5933dbd-3d61-41a7-8f27-f90585660534",
+      "alert_id": "4e8d9dc7-5862-50db-abc0-1d23ba192d13",
       "device_id": "INV-10",
       "ts": "2026-06-01T14:30:00Z",
       "rule": "temp_high_for_power",
@@ -152,7 +152,7 @@
   {
     "item_id": "ITEM-0011",
     "alert": {
-      "alert_id": "4ee487b3-4cf6-434a-aa0f-ef8f880de784",
+      "alert_id": "c5dd7502-793a-5d57-b020-223edd2d8b01",
       "device_id": "INV-11",
       "ts": "2026-06-01T14:45:00Z",
       "rule": "temp_high_for_power",
@@ -167,7 +167,7 @@
   {
     "item_id": "ITEM-0012",
     "alert": {
-      "alert_id": "662ce265-fed6-42d9-8f2b-546499e6b38e",
+      "alert_id": "83855252-b17b-5ceb-852e-1e89ef37d167",
       "device_id": "INV-12",
       "ts": "2026-06-01T15:00:00Z",
       "rule": "temp_high_for_power",
@@ -182,7 +182,7 @@
   {
     "item_id": "ITEM-0013",
     "alert": {
-      "alert_id": "e7a47db6-c5c8-46a1-b5ad-ad84f6bdff8c",
+      "alert_id": "367e9179-ee1c-5a27-a0c0-a2e0cf2fb309",
       "device_id": "INV-13",
       "ts": "2026-06-01T15:15:00Z",
       "rule": "temp_high_for_power",
@@ -197,7 +197,7 @@
   {
     "item_id": "ITEM-0014",
     "alert": {
-      "alert_id": "f18b35d2-bf2d-4a2d-9c0c-f18fbb2a43e4",
+      "alert_id": "e852d98f-6969-59b3-b063-1807497f895d",
       "device_id": "INV-14",
       "ts": "2026-06-01T15:30:00Z",
       "rule": "temp_high_for_power",
@@ -212,7 +212,7 @@
   {
     "item_id": "ITEM-0015",
     "alert": {
-      "alert_id": "d04b4070-972c-4dcf-98ca-ee83d0b99151",
+      "alert_id": "a81c28d3-0099-5ae1-8854-0dd911ca96b5",
       "device_id": "INV-15",
       "ts": "2026-06-01T15:45:00Z",
       "rule": "temp_high_for_power",
@@ -227,7 +227,7 @@
   {
     "item_id": "ITEM-0016",
     "alert": {
-      "alert_id": "bbee37a5-39df-493e-8f4d-632b7c60beed",
+      "alert_id": "4b9daf8c-d560-58b7-813f-5f04c77870f5",
       "device_id": "INV-16",
       "ts": "2026-06-01T16:00:00Z",
       "rule": "temp_high_for_power",
@@ -242,7 +242,7 @@
   {
     "item_id": "ITEM-0017",
     "alert": {
-      "alert_id": "b91f773b-3ebc-4db7-a00f-39af3162f46c",
+      "alert_id": "3657f93a-3855-5dc7-bdba-aa27fb5c71cd",
       "device_id": "INV-17",
       "ts": "2026-06-01T16:15:00Z",
       "rule": "temp_high_for_power",
@@ -257,7 +257,7 @@
   {
     "item_id": "ITEM-0018",
     "alert": {
-      "alert_id": "1b07538a-d735-495d-9c6c-0e260def085e",
+      "alert_id": "a43f431d-ba72-5e97-8407-ce10c462ba5d",
       "device_id": "INV-18",
       "ts": "2026-06-01T16:30:00Z",
       "rule": "temp_high_for_power",
@@ -272,7 +272,7 @@
   {
     "item_id": "ITEM-0019",
     "alert": {
-      "alert_id": "557dd50e-345e-45f0-9aa8-06b75578bff8",
+      "alert_id": "3d765d93-fa41-5c8a-ac39-81f0e29e1aa1",
       "device_id": "INV-19",
       "ts": "2026-06-01T16:45:00Z",
       "rule": "temp_high_for_power",
@@ -287,7 +287,7 @@
   {
     "item_id": "ITEM-0020",
     "alert": {
-      "alert_id": "e6c4fcdd-9fe4-48b6-89ff-add3ededdf92",
+      "alert_id": "5817a846-ce4e-55d3-9183-4c6f8b9b44ca",
       "device_id": "INV-20",
       "ts": "2026-06-01T17:00:00Z",
       "rule": "temp_high_for_power",
@@ -302,7 +302,7 @@
   {
     "item_id": "ITEM-0021",
     "alert": {
-      "alert_id": "afd8c47f-0005-45f5-ace6-fd3e6c5f9851",
+      "alert_id": "b65e27cf-56fd-543e-b7a0-22395c549549",
       "device_id": "INV-01",
       "ts": "2026-06-01T17:15:00Z",
       "rule": "grid_voltage_low",
@@ -317,7 +317,7 @@
   {
     "item_id": "ITEM-0022",
     "alert": {
-      "alert_id": "c6926edd-2855-4c09-84e5-b4385c866430",
+      "alert_id": "f78e2ce0-48c0-576e-84d1-33b9d94c4af2",
       "device_id": "INV-02",
       "ts": "2026-06-01T17:30:00Z",
       "rule": "grid_voltage_low",
@@ -332,7 +332,7 @@
   {
     "item_id": "ITEM-0023",
     "alert": {
-      "alert_id": "1d576b34-24da-4a62-990b-d877ae0506aa",
+      "alert_id": "34a93d78-5385-5091-aa7d-4d9a6b6d47ba",
       "device_id": "INV-03",
       "ts": "2026-06-01T17:45:00Z",
       "rule": "grid_voltage_low",
@@ -347,7 +347,7 @@
   {
     "item_id": "ITEM-0024",
     "alert": {
-      "alert_id": "6dfd1be3-f3db-4ce3-9bbd-d896461a7188",
+      "alert_id": "3af72ea4-0485-5826-a268-c051f8818f1d",
       "device_id": "INV-04",
       "ts": "2026-06-01T18:00:00Z",
       "rule": "grid_voltage_low",
@@ -362,7 +362,7 @@
   {
     "item_id": "ITEM-0025",
     "alert": {
-      "alert_id": "2b004982-e879-464f-86b3-929014533521",
+      "alert_id": "1b56e2ca-90df-56c7-8c3d-6bdda9499c70",
       "device_id": "INV-05",
       "ts": "2026-06-01T18:15:00Z",
       "rule": "grid_voltage_low",
@@ -377,7 +377,7 @@
   {
     "item_id": "ITEM-0026",
     "alert": {
-      "alert_id": "a16a958e-ee6e-43b5-aace-43a74c0cd408",
+      "alert_id": "9700fc51-d4f0-5365-bf1c-3feb52f5edac",
       "device_id": "INV-06",
       "ts": "2026-06-01T18:30:00Z",
       "rule": "grid_voltage_low",
@@ -392,7 +392,7 @@
   {
     "item_id": "ITEM-0027",
     "alert": {
-      "alert_id": "e9ad769c-1c9b-4ec0-8fb4-aca6dddba2be",
+      "alert_id": "97a4ae9d-d439-5f08-aa9d-897a8bdb2969",
       "device_id": "INV-07",
       "ts": "2026-06-01T18:45:00Z",
       "rule": "grid_voltage_low",
@@ -407,7 +407,7 @@
   {
     "item_id": "ITEM-0028",
     "alert": {
-      "alert_id": "30c07496-b7c5-48af-a4a1-b051df80e14c",
+      "alert_id": "40823113-8cde-5d84-af3d-a15550473000",
       "device_id": "INV-08",
       "ts": "2026-06-01T19:00:00Z",
       "rule": "grid_voltage_low",
@@ -422,7 +422,7 @@
   {
     "item_id": "ITEM-0029",
     "alert": {
-      "alert_id": "f42730ce-4977-44c9-92c9-22874d1eac1b",
+      "alert_id": "1f2ab098-c029-5ff6-8ea1-46ca104c523d",
       "device_id": "INV-09",
       "ts": "2026-06-01T19:15:00Z",
       "rule": "grid_voltage_low",
@@ -437,7 +437,7 @@
   {
     "item_id": "ITEM-0030",
     "alert": {
-      "alert_id": "6acc82d4-933a-475b-bd70-d5d37c6574b2",
+      "alert_id": "0088582a-129f-5d1c-9d13-cdf88f8cb414",
       "device_id": "INV-10",
       "ts": "2026-06-01T19:30:00Z",
       "rule": "grid_voltage_low",
@@ -452,7 +452,7 @@
   {
     "item_id": "ITEM-0031",
     "alert": {
-      "alert_id": "58559622-02c9-4bf4-8758-d502b28217d4",
+      "alert_id": "6f7b01bf-d17e-5287-952c-6640b29f8bf2",
       "device_id": "INV-11",
       "ts": "2026-06-01T19:45:00Z",
       "rule": "grid_voltage_low",
@@ -467,7 +467,7 @@
   {
     "item_id": "ITEM-0032",
     "alert": {
-      "alert_id": "ee405376-f73a-4100-8926-09f79364cfcc",
+      "alert_id": "5de27bf0-32dd-5473-8ee7-1eee8728a97d",
       "device_id": "INV-12",
       "ts": "2026-06-01T20:00:00Z",
       "rule": "grid_voltage_low",
@@ -482,7 +482,7 @@
   {
     "item_id": "ITEM-0033",
     "alert": {
-      "alert_id": "553b8133-b3ae-41af-8b56-1b055d904c13",
+      "alert_id": "6f0f3a58-0b2e-510a-bf45-9118ac821b87",
       "device_id": "INV-13",
       "ts": "2026-06-01T20:15:00Z",
       "rule": "grid_voltage_low",
@@ -497,7 +497,7 @@
   {
     "item_id": "ITEM-0034",
     "alert": {
-      "alert_id": "d2bb18b1-dfeb-4c9b-b45e-29056e519a16",
+      "alert_id": "a9f6b853-42fe-501f-8f28-a6cb3eef509b",
       "device_id": "INV-14",
       "ts": "2026-06-01T20:30:00Z",
       "rule": "grid_voltage_low",
@@ -512,7 +512,7 @@
   {
     "item_id": "ITEM-0035",
     "alert": {
-      "alert_id": "dd688c53-3fdf-4a31-865e-ac37e8cc5a8f",
+      "alert_id": "4bfa9c70-f5e8-5d51-b170-330b4a7e1ff6",
       "device_id": "INV-15",
       "ts": "2026-06-01T20:45:00Z",
       "rule": "grid_voltage_low",
@@ -527,7 +527,7 @@
   {
     "item_id": "ITEM-0036",
     "alert": {
-      "alert_id": "304fea1a-6549-4cdd-9bf1-19ac43af332a",
+      "alert_id": "93ca891a-16bf-54f2-960c-866224581d3c",
       "device_id": "INV-16",
       "ts": "2026-06-01T21:00:00Z",
       "rule": "grid_voltage_low",
@@ -542,7 +542,7 @@
   {
     "item_id": "ITEM-0037",
     "alert": {
-      "alert_id": "3c2812c9-fafb-449c-9929-3ab259b2a441",
+      "alert_id": "c8056f2b-0f6d-538a-a68b-516607c27ce4",
       "device_id": "INV-17",
       "ts": "2026-06-01T21:15:00Z",
       "rule": "grid_voltage_low",
@@ -557,7 +557,7 @@
   {
     "item_id": "ITEM-0038",
     "alert": {
-      "alert_id": "254a20e6-b4b9-4a63-92c0-57842f638222",
+      "alert_id": "397a82c5-8e60-5970-a464-4813745e5779",
       "device_id": "INV-18",
       "ts": "2026-06-01T21:30:00Z",
       "rule": "grid_voltage_low",
@@ -572,7 +572,7 @@
   {
     "item_id": "ITEM-0039",
     "alert": {
-      "alert_id": "7af4b4fd-945f-42ff-beca-4ef2a462237d",
+      "alert_id": "7924be30-d3fe-5561-8974-2188ff13a57f",
       "device_id": "INV-19",
       "ts": "2026-06-01T21:45:00Z",
       "rule": "grid_voltage_low",
@@ -587,7 +587,7 @@
   {
     "item_id": "ITEM-0040",
     "alert": {
-      "alert_id": "e760f98c-fefc-45de-af44-afae6b6928c0",
+      "alert_id": "2e6ee60a-f163-56dc-8d28-2cf23e2a46de",
       "device_id": "INV-20",
       "ts": "2026-06-01T22:00:00Z",
       "rule": "grid_voltage_low",
@@ -602,7 +602,7 @@
   {
     "item_id": "ITEM-0041",
     "alert": {
-      "alert_id": "95d65d53-7b38-4942-abf5-7a0fa95a5d19",
+      "alert_id": "5591fb12-4df9-553f-96e2-a73def8a868a",
       "device_id": "INV-01",
       "ts": "2026-06-01T22:15:00Z",
       "rule": "relay_mismatch",
@@ -617,7 +617,7 @@
   {
     "item_id": "ITEM-0042",
     "alert": {
-      "alert_id": "8d39d804-5ea7-4750-b828-013dc077effd",
+      "alert_id": "e9904194-8d92-505f-833a-4ff6b1ae2081",
       "device_id": "INV-02",
       "ts": "2026-06-01T22:30:00Z",
       "rule": "relay_mismatch",
@@ -632,7 +632,7 @@
   {
     "item_id": "ITEM-0043",
     "alert": {
-      "alert_id": "d706f6a2-2b27-46be-94dc-4c568ebcfff6",
+      "alert_id": "f8b72237-0f35-510a-bd39-6246f7d5ca14",
       "device_id": "INV-03",
       "ts": "2026-06-01T22:45:00Z",
       "rule": "relay_mismatch",
@@ -647,7 +647,7 @@
   {
     "item_id": "ITEM-0044",
     "alert": {
-      "alert_id": "589d24d4-595f-4151-89fa-3447e5a83ad7",
+      "alert_id": "a7ee3b30-0224-53c0-acf9-f65790884c5d",
       "device_id": "INV-04",
       "ts": "2026-06-01T23:00:00Z",
       "rule": "relay_mismatch",
@@ -662,7 +662,7 @@
   {
     "item_id": "ITEM-0045",
     "alert": {
-      "alert_id": "ab9ca183-bd2d-484b-9b6c-b97553f0c17b",
+      "alert_id": "b6d04b95-5fc9-5d35-be95-dbeb1b49e208",
       "device_id": "INV-05",
       "ts": "2026-06-01T23:15:00Z",
       "rule": "relay_mismatch",
@@ -677,7 +677,7 @@
   {
     "item_id": "ITEM-0046",
     "alert": {
-      "alert_id": "e29d694a-3776-4d16-8b83-a260cf55e44f",
+      "alert_id": "91b5a102-331f-5427-8e87-6feb7a9dac7e",
       "device_id": "INV-06",
       "ts": "2026-06-01T23:30:00Z",
       "rule": "relay_mismatch",
@@ -692,7 +692,7 @@
   {
     "item_id": "ITEM-0047",
     "alert": {
-      "alert_id": "4e913305-52d9-4351-a902-e761d3c1f12a",
+      "alert_id": "95a71f27-5346-5476-b7d8-a1d53a184657",
       "device_id": "INV-07",
       "ts": "2026-06-01T23:45:00Z",
       "rule": "relay_mismatch",
@@ -707,7 +707,7 @@
   {
     "item_id": "ITEM-0048",
     "alert": {
-      "alert_id": "f4855e67-1462-43eb-95d6-591ae3eef0a3",
+      "alert_id": "830393c1-5c77-50b6-9ef4-3c584e0d1593",
       "device_id": "INV-08",
       "ts": "2026-06-02T00:00:00Z",
       "rule": "relay_mismatch",
@@ -722,7 +722,7 @@
   {
     "item_id": "ITEM-0049",
     "alert": {
-      "alert_id": "5c92613c-f495-4cb8-a1dd-485ccf403c8e",
+      "alert_id": "15717ddb-540d-594a-a714-40a0ef7ee873",
       "device_id": "INV-09",
       "ts": "2026-06-02T00:15:00Z",
       "rule": "relay_mismatch",
@@ -737,7 +737,7 @@
   {
     "item_id": "ITEM-0050",
     "alert": {
-      "alert_id": "88829da8-45b0-450f-9e70-ba1cf1c9d391",
+      "alert_id": "3945326e-7e99-547a-9109-46f89f149618",
       "device_id": "INV-10",
       "ts": "2026-06-02T00:30:00Z",
       "rule": "relay_mismatch",
@@ -752,7 +752,7 @@
   {
     "item_id": "ITEM-0051",
     "alert": {
-      "alert_id": "9be0c7a9-d77d-4dc1-9c51-3a6e351ae129",
+      "alert_id": "0aeb9c85-9d10-5ca9-8d8e-acff2b684012",
       "device_id": "INV-11",
       "ts": "2026-06-02T00:45:00Z",
       "rule": "relay_mismatch",
@@ -767,7 +767,7 @@
   {
     "item_id": "ITEM-0052",
     "alert": {
-      "alert_id": "93e5ae73-feb6-42d5-abf1-3c424a6f8b07",
+      "alert_id": "15c924d6-95c4-51d4-9f73-6388b595fa2c",
       "device_id": "INV-12",
       "ts": "2026-06-02T01:00:00Z",
       "rule": "relay_mismatch",
@@ -782,7 +782,7 @@
   {
     "item_id": "ITEM-0053",
     "alert": {
-      "alert_id": "647192de-8ac9-4c2b-b550-5406e393f873",
+      "alert_id": "bee2df25-b735-5b13-ba58-9d384d3bd833",
       "device_id": "INV-13",
       "ts": "2026-06-02T01:15:00Z",
       "rule": "relay_mismatch",
@@ -797,7 +797,7 @@
   {
     "item_id": "ITEM-0054",
     "alert": {
-      "alert_id": "3a648840-8bcb-4b5e-b844-309faf28d204",
+      "alert_id": "41f7a83e-7c8a-5bf7-94b1-2c656bb126a2",
       "device_id": "INV-14",
       "ts": "2026-06-02T01:30:00Z",
       "rule": "relay_mismatch",
@@ -812,7 +812,7 @@
   {
     "item_id": "ITEM-0055",
     "alert": {
-      "alert_id": "1a42d3ff-e8fe-4f43-9fae-c8f65592b42b",
+      "alert_id": "8f3d2f6f-7506-5086-919b-63fd6957ce07",
       "device_id": "INV-15",
       "ts": "2026-06-02T01:45:00Z",
       "rule": "relay_mismatch",
@@ -827,7 +827,7 @@
   {
     "item_id": "ITEM-0056",
     "alert": {
-      "alert_id": "e2a84020-1dfd-4247-ad04-699c249d2961",
+      "alert_id": "85a4b191-92b5-5ba5-bbf8-d6a22db5231a",
       "device_id": "INV-16",
       "ts": "2026-06-02T02:00:00Z",
       "rule": "relay_mismatch",
@@ -842,7 +842,7 @@
   {
     "item_id": "ITEM-0057",
     "alert": {
-      "alert_id": "de454c07-932d-4c4e-bfad-5b5658bd3b49",
+      "alert_id": "f5fc3413-06fe-5ffd-ac26-f406a1cb2c93",
       "device_id": "INV-17",
       "ts": "2026-06-02T02:15:00Z",
       "rule": "relay_mismatch",
@@ -857,7 +857,7 @@
   {
     "item_id": "ITEM-0058",
     "alert": {
-      "alert_id": "45fb9aeb-7f06-4b88-a53a-cafd75d5ec77",
+      "alert_id": "2ab13d70-b18b-57a9-bd58-5feb9b74ab41",
       "device_id": "INV-18",
       "ts": "2026-06-02T02:30:00Z",
       "rule": "relay_mismatch",
@@ -872,7 +872,7 @@
   {
     "item_id": "ITEM-0059",
     "alert": {
-      "alert_id": "30dce222-395c-4808-b796-fbfcf0bffbf9",
+      "alert_id": "89cd3fa2-287b-578a-ac2d-e3b848837ee3",
       "device_id": "INV-19",
       "ts": "2026-06-02T02:45:00Z",
       "rule": "relay_mismatch",
@@ -887,7 +887,7 @@
   {
     "item_id": "ITEM-0060",
     "alert": {
-      "alert_id": "f258e025-94df-429c-af34-ebbdf3853c4f",
+      "alert_id": "81121b72-9ec4-5535-8f1b-213acd741c75",
       "device_id": "INV-20",
       "ts": "2026-06-02T03:00:00Z",
       "rule": "relay_mismatch",
@@ -902,7 +902,7 @@
   {
     "item_id": "ITEM-0061",
     "alert": {
-      "alert_id": "a3559155-f2ee-4fdf-b128-0d933ac70255",
+      "alert_id": "6df9e48a-d7a7-57df-85eb-cd335b829654",
       "device_id": "INV-01",
       "ts": "2026-06-02T03:15:00Z",
       "rule": "device_silent",
@@ -917,7 +917,7 @@
   {
     "item_id": "ITEM-0062",
     "alert": {
-      "alert_id": "9fd3e60c-1efe-4221-a994-9a958b549ce9",
+      "alert_id": "ad178a6c-1e18-5ae3-a823-96b9e5c81b5a",
       "device_id": "INV-02",
       "ts": "2026-06-02T03:30:00Z",
       "rule": "device_silent",
@@ -932,7 +932,7 @@
   {
     "item_id": "ITEM-0063",
     "alert": {
-      "alert_id": "62ee8182-05df-45eb-80a8-38def4d2f081",
+      "alert_id": "34605f09-ebc0-560c-8f68-c10cc4fced93",
       "device_id": "INV-03",
       "ts": "2026-06-02T03:45:00Z",
       "rule": "device_silent",
@@ -947,7 +947,7 @@
   {
     "item_id": "ITEM-0064",
     "alert": {
-      "alert_id": "e8f742d0-5342-4152-ae91-f4523303284b",
+      "alert_id": "1d210c29-51d9-553d-8f2e-544907dbf926",
       "device_id": "INV-04",
       "ts": "2026-06-02T04:00:00Z",
       "rule": "device_silent",
@@ -962,7 +962,7 @@
   {
     "item_id": "ITEM-0065",
     "alert": {
-      "alert_id": "66da50b4-3561-434d-818c-deaf2c4b6b41",
+      "alert_id": "5495efdf-f836-53f3-aaa3-5610e940e005",
       "device_id": "INV-05",
       "ts": "2026-06-02T04:15:00Z",
       "rule": "device_silent",
@@ -977,7 +977,7 @@
   {
     "item_id": "ITEM-0066",
     "alert": {
-      "alert_id": "bc721093-652e-40c5-a992-8667a7c24e06",
+      "alert_id": "886d5af4-4209-5265-b237-5011183c9dc2",
       "device_id": "INV-06",
       "ts": "2026-06-02T04:30:00Z",
       "rule": "device_silent",
@@ -992,7 +992,7 @@
   {
     "item_id": "ITEM-0067",
     "alert": {
-      "alert_id": "8acdd779-0937-4b54-952b-c4941fee90dd",
+      "alert_id": "03cfc697-e599-54b6-9395-c8281a236e83",
       "device_id": "INV-07",
       "ts": "2026-06-02T04:45:00Z",
       "rule": "device_silent",
@@ -1007,7 +1007,7 @@
   {
     "item_id": "ITEM-0068",
     "alert": {
-      "alert_id": "144d3843-d51e-4255-9331-2207298a21e2",
+      "alert_id": "8204b854-daae-5a42-851d-be4fb9a4082d",
       "device_id": "INV-08",
       "ts": "2026-06-02T05:00:00Z",
       "rule": "device_silent",
@@ -1022,7 +1022,7 @@
   {
     "item_id": "ITEM-0069",
     "alert": {
-      "alert_id": "369d5850-d120-4f8b-a87d-0602a3262ec8",
+      "alert_id": "2e4ca5dd-8344-5e76-a2b2-d2b99a29f3a8",
       "device_id": "INV-09",
       "ts": "2026-06-02T05:15:00Z",
       "rule": "device_silent",
@@ -1037,7 +1037,7 @@
   {
     "item_id": "ITEM-0070",
     "alert": {
-      "alert_id": "fcec73ae-f019-446b-8ed0-927848339414",
+      "alert_id": "6f36e3a4-11df-550c-bdc0-57babcf4c2f0",
       "device_id": "INV-10",
       "ts": "2026-06-02T05:30:00Z",
       "rule": "device_silent",
@@ -1052,7 +1052,7 @@
   {
     "item_id": "ITEM-0071",
     "alert": {
-      "alert_id": "cf790922-8032-401e-a002-9843b11305a9",
+      "alert_id": "2f4a54b2-86a0-5fc9-948c-d39f6ee3992a",
       "device_id": "INV-11",
       "ts": "2026-06-02T05:45:00Z",
       "rule": "device_silent",
@@ -1067,7 +1067,7 @@
   {
     "item_id": "ITEM-0072",
     "alert": {
-      "alert_id": "6fb7d3db-21cf-455e-866d-ef7c4eb0d64f",
+      "alert_id": "7cdb518d-e6e4-52c3-bf46-81969838abaf",
       "device_id": "INV-12",
       "ts": "2026-06-02T06:00:00Z",
       "rule": "device_silent",
@@ -1082,7 +1082,7 @@
   {
     "item_id": "ITEM-0073",
     "alert": {
-      "alert_id": "89c61e2f-d22f-4085-a2fc-dd74a8f22194",
+      "alert_id": "8a36de87-9d66-5861-8ac6-67ae8bd26630",
       "device_id": "INV-13",
       "ts": "2026-06-02T06:15:00Z",
       "rule": "device_silent",
@@ -1097,7 +1097,7 @@
   {
     "item_id": "ITEM-0074",
     "alert": {
-      "alert_id": "ab81e47e-1bb0-4892-9309-27ad3a9dcbf3",
+      "alert_id": "db1d4218-3ac1-5b6d-9ec5-662d3e8a4b3e",
       "device_id": "INV-14",
       "ts": "2026-06-02T06:30:00Z",
       "rule": "device_silent",
@@ -1112,7 +1112,7 @@
   {
     "item_id": "ITEM-0075",
     "alert": {
-      "alert_id": "ee189616-f666-4e35-9453-272bebf0b407",
+      "alert_id": "dc2f3c63-afff-53dc-9de5-9d4c41aa3aa6",
       "device_id": "INV-15",
       "ts": "2026-06-02T06:45:00Z",
       "rule": "device_silent",
@@ -1127,7 +1127,7 @@
   {
     "item_id": "ITEM-0076",
     "alert": {
-      "alert_id": "d3b38c43-e390-4f4e-b97f-460b86f53d85",
+      "alert_id": "20915bdc-fa49-56fc-bcc4-4cae86dceeef",
       "device_id": "INV-16",
       "ts": "2026-06-02T07:00:00Z",
       "rule": "device_silent",
@@ -1142,7 +1142,7 @@
   {
     "item_id": "ITEM-0077",
     "alert": {
-      "alert_id": "83fd394c-c388-457e-8c74-34ffd28a0ad8",
+      "alert_id": "b971e51e-19b0-53f9-99ea-3a1b63aa93b8",
       "device_id": "INV-17",
       "ts": "2026-06-02T07:15:00Z",
       "rule": "device_silent",
@@ -1157,7 +1157,7 @@
   {
     "item_id": "ITEM-0078",
     "alert": {
-      "alert_id": "ccd91270-6d05-47b4-8753-51b92389f583",
+      "alert_id": "227bcd4a-9ef9-5215-a0a3-a3d811c1bf04",
       "device_id": "INV-18",
       "ts": "2026-06-02T07:30:00Z",
       "rule": "device_silent",
@@ -1172,7 +1172,7 @@
   {
     "item_id": "ITEM-0079",
     "alert": {
-      "alert_id": "7bd0249e-e67e-4102-b245-d46c6e819d4a",
+      "alert_id": "f1b823f0-90a2-5a9e-bfa4-08e16b05a71b",
       "device_id": "INV-19",
       "ts": "2026-06-02T07:45:00Z",
       "rule": "device_silent",
@@ -1187,7 +1187,7 @@
   {
     "item_id": "ITEM-0080",
     "alert": {
-      "alert_id": "63ff7e56-53b6-447b-aba1-da60084714bb",
+      "alert_id": "bf4a0415-c085-5f65-88de-717c9e16cf38",
       "device_id": "INV-20",
       "ts": "2026-06-02T08:00:00Z",
       "rule": "device_silent",
@@ -1202,7 +1202,7 @@
   {
     "item_id": "ITEM-0081",
     "alert": {
-      "alert_id": "07a5e9f0-6e4e-42b9-8bc9-8c8045b614c4",
+      "alert_id": "59ffb7c6-a42f-5bd6-9285-d78d7931fd30",
       "device_id": "INV-01",
       "ts": "2026-06-02T08:15:00Z",
       "rule": "temp_high_for_power",
@@ -1217,7 +1217,7 @@
   {
     "item_id": "ITEM-0082",
     "alert": {
-      "alert_id": "eafe1c00-888e-4587-99a0-5e103833bd65",
+      "alert_id": "24a5f281-3a4d-5b76-922e-239858f9c6e2",
       "device_id": "INV-02",
       "ts": "2026-06-02T08:30:00Z",
       "rule": "temp_high_for_power",
@@ -1232,7 +1232,7 @@
   {
     "item_id": "ITEM-0083",
     "alert": {
-      "alert_id": "69846c42-94cf-4bed-8070-ef529a6dc4d3",
+      "alert_id": "ed459630-6899-542c-a351-e482f9dbcd28",
       "device_id": "INV-03",
       "ts": "2026-06-02T08:45:00Z",
       "rule": "temp_high_for_power",
@@ -1247,7 +1247,7 @@
   {
     "item_id": "ITEM-0084",
     "alert": {
-      "alert_id": "e0dddb67-c9d6-4697-8896-5a798453a1c6",
+      "alert_id": "6623daa2-ab60-5c72-97a3-d0604135a1e9",
       "device_id": "INV-04",
       "ts": "2026-06-02T09:00:00Z",
       "rule": "temp_high_for_power",
@@ -1262,7 +1262,7 @@
   {
     "item_id": "ITEM-0085",
     "alert": {
-      "alert_id": "152ce1cf-a6fa-41da-9bad-e032caea2db5",
+      "alert_id": "b14f7f91-2a80-5fb6-a40a-cefaf6c268e3",
       "device_id": "INV-05",
       "ts": "2026-06-02T09:15:00Z",
       "rule": "temp_high_for_power",
@@ -1277,7 +1277,7 @@
   {
     "item_id": "ITEM-0086",
     "alert": {
-      "alert_id": "3e7e567a-cccf-450f-8dd7-9d4384c0e8a9",
+      "alert_id": "8ea6079e-d31f-55e7-8cea-132e09db280f",
       "device_id": "INV-06",
       "ts": "2026-06-02T09:30:00Z",
       "rule": "temp_high_for_power",
@@ -1292,7 +1292,7 @@
   {
     "item_id": "ITEM-0087",
     "alert": {
-      "alert_id": "ee32b895-12b4-4d80-948e-2f6e600e7ce9",
+      "alert_id": "8a82faa4-bfc9-5dff-83ab-593b110c6f67",
       "device_id": "INV-07",
       "ts": "2026-06-02T09:45:00Z",
       "rule": "temp_high_for_power",
@@ -1307,7 +1307,7 @@
   {
     "item_id": "ITEM-0088",
     "alert": {
-      "alert_id": "040da4f5-3591-4434-bdb8-2db38fe7615d",
+      "alert_id": "82688ae1-5b2c-5652-bd97-1d8f5373de7d",
       "device_id": "INV-08",
       "ts": "2026-06-02T10:00:00Z",
       "rule": "temp_high_for_power",
@@ -1322,7 +1322,7 @@
   {
     "item_id": "ITEM-0089",
     "alert": {
-      "alert_id": "61ea0495-3a63-42ac-88ee-67531fcf007d",
+      "alert_id": "06066c59-528b-54e6-b81c-3eee0894e1c2",
       "device_id": "INV-09",
       "ts": "2026-06-02T10:15:00Z",
       "rule": "temp_high_for_power",
@@ -1337,7 +1337,7 @@
   {
     "item_id": "ITEM-0090",
     "alert": {
-      "alert_id": "ad01dc80-65d9-4698-8257-000e73897fa1",
+      "alert_id": "63e218f1-f3d9-501a-9023-2df713456454",
       "device_id": "INV-10",
       "ts": "2026-06-02T10:30:00Z",
       "rule": "temp_high_for_power",
@@ -1352,7 +1352,7 @@
   {
     "item_id": "ITEM-0091",
     "alert": {
-      "alert_id": "70ba4061-42b1-4679-8d38-3a0bead770fb",
+      "alert_id": "b7169359-965d-5b3c-ad44-7aa897c9a7f3",
       "device_id": "INV-11",
       "ts": "2026-06-02T10:45:00Z",
       "rule": "temp_high_for_power",
@@ -1367,7 +1367,7 @@
   {
     "item_id": "ITEM-0092",
     "alert": {
-      "alert_id": "c7a9fd66-ea78-4d2a-a05b-2e8e3e722cf8",
+      "alert_id": "c6c95503-db4d-59cb-9f58-093f0fa5bfda",
       "device_id": "INV-12",
       "ts": "2026-06-02T11:00:00Z",
       "rule": "temp_high_for_power",
@@ -1382,7 +1382,7 @@
   {
     "item_id": "ITEM-0093",
     "alert": {
-      "alert_id": "4e36837c-81ee-4d2b-bf21-fc1fc4b27a55",
+      "alert_id": "99c0631c-835c-5f4d-8ff7-18b05993bd6e",
       "device_id": "INV-13",
       "ts": "2026-06-02T11:15:00Z",
       "rule": "temp_high_for_power",
@@ -1397,7 +1397,7 @@
   {
     "item_id": "ITEM-0094",
     "alert": {
-      "alert_id": "24158048-79ac-4782-b232-df1cac1f6ae1",
+      "alert_id": "a8318795-cc2c-5030-946f-44ce05f9e2c5",
       "device_id": "INV-14",
       "ts": "2026-06-02T11:30:00Z",
       "rule": "temp_high_for_power",
@@ -1412,7 +1412,7 @@
   {
     "item_id": "ITEM-0095",
     "alert": {
-      "alert_id": "edd8bb83-6104-4360-920e-c67fefa49bb1",
+      "alert_id": "ab17383d-2fed-5f06-8165-27d7d51b4402",
       "device_id": "INV-15",
       "ts": "2026-06-02T11:45:00Z",
       "rule": "temp_high_for_power",
@@ -1427,7 +1427,7 @@
   {
     "item_id": "ITEM-0096",
     "alert": {
-      "alert_id": "11e4073f-4e9c-4b83-b0c2-66c37e2e72b1",
+      "alert_id": "a8073de1-f1aa-513e-a421-663d894ca09e",
       "device_id": "INV-16",
       "ts": "2026-06-02T12:00:00Z",
       "rule": "temp_high_for_power",
@@ -1442,7 +1442,7 @@
   {
     "item_id": "ITEM-0097",
     "alert": {
-      "alert_id": "bc2f7024-e577-42ee-9a88-69cec2f4247a",
+      "alert_id": "2becbdc1-2ff9-57dd-9632-8f13fd33e90f",
       "device_id": "INV-17",
       "ts": "2026-06-02T12:15:00Z",
       "rule": "temp_high_for_power",
@@ -1457,7 +1457,7 @@
   {
     "item_id": "ITEM-0098",
     "alert": {
-      "alert_id": "3f89d99c-13e7-4261-95c8-ccd7061cce35",
+      "alert_id": "e6f22399-1553-576f-a754-8f7adb27aefd",
       "device_id": "INV-18",
       "ts": "2026-06-02T12:30:00Z",
       "rule": "temp_high_for_power",
@@ -1472,7 +1472,7 @@
   {
     "item_id": "ITEM-0099",
     "alert": {
-      "alert_id": "89df6514-fc59-4662-b900-65ccf15e9b78",
+      "alert_id": "13073724-198e-59d0-a359-b06bc95a0558",
       "device_id": "INV-19",
       "ts": "2026-06-02T12:45:00Z",
       "rule": "temp_high_for_power",
@@ -1487,7 +1487,7 @@
   {
     "item_id": "ITEM-0100",
     "alert": {
-      "alert_id": "20ac836d-5b62-4b65-8776-40aa0ca8a6f9",
+      "alert_id": "7d97f7db-ab32-58fd-bd12-b37ae3edf211",
       "device_id": "INV-20",
       "ts": "2026-06-02T13:00:00Z",
       "rule": "temp_high_for_power",

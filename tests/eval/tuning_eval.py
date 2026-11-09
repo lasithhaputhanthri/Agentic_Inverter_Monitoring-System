@@ -9,6 +9,7 @@ Outputs: Generated fixtures in tests/eval/fixtures/ and baseline deliverable doc
 from __future__ import annotations
 
 import json
+import uuid
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -69,6 +70,7 @@ def generate_evaluation_split(
                 else AlertSeverity.CRITICAL,
                 observed=obs,
                 threshold=thresh,
+                alert_id=uuid.uuid5(uuid.NAMESPACE_DNS, f"iir-eval-{seed}-{idx}"),
             )
 
             items.append(
@@ -93,6 +95,7 @@ def generate_evaluation_split(
             severity=AlertSeverity.INFO,
             observed=48.0,
             threshold=12.0,
+            alert_id=uuid.uuid5(uuid.NAMESPACE_DNS, f"iir-eval-{seed}-{idx}"),
         )
         items.append(
             {
