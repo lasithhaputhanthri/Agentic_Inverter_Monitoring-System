@@ -2,7 +2,14 @@
 
 from backend.agents.cache import AgentCache
 from backend.agents.diagnosis import DiagnosisAgent
-from backend.agents.llm_client import FakeLLMClient, LLMClient, LLMResponse, ProviderLLMClient
+from backend.agents.llm_client import (
+    FakeLLMClient,
+    GeminiLLMClient,
+    LLMClient,
+    LLMResponse,
+    ProviderLLMClient,
+    create_llm_client,
+)
 from backend.agents.models import (
     ActionProposal,
     DiagnosisCause,
@@ -27,6 +34,7 @@ __all__ = [
     "DiagnosisCause",
     "DiagnosisResult",
     "FakeLLMClient",
+    "GeminiLLMClient",
     "LLMClient",
     "LLMResponse",
     "ProviderLLMClient",
@@ -34,6 +42,7 @@ __all__ = [
     "RemediationAction",
     "RemediationAgent",
     "TelemetryStore",
+    "create_llm_client",
     "get_fleet_snapshot",
     "get_recent_telemetry",
     "load_prompt",
