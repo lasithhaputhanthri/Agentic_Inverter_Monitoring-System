@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 from backend.evaluation.harness import (
+    HELD_OUT_SEED_END,
     HELD_OUT_SEED_START,
     TUNING_SEED_START,
     run_benchmark,
@@ -144,10 +145,8 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.final:
-        # Full held-out range
-        seeds = list(
-            range(HELD_OUT_SEED_START, HELD_OUT_SEED_START + 5)
-        )  # Run initial 5 seeds or full
+        # Full held-out range [2000-2099] (100 seeds for statistical significance)
+        seeds = list(range(HELD_OUT_SEED_START, HELD_OUT_SEED_END + 1))
     else:
         # Tuning seed split default
         seeds = args.seeds or list(range(TUNING_SEED_START, TUNING_SEED_START + 5))

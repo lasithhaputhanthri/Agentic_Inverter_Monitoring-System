@@ -14,6 +14,7 @@ import json
 import logging
 import math
 import re
+import sqlite3
 import uuid
 from dataclasses import asdict, dataclass
 from datetime import UTC, datetime, timedelta
@@ -47,7 +48,6 @@ from backend.faults.models import FaultSpec, FaultType
 from backend.faults.scheduler import plan_faults
 from backend.monitor.baseline_model import calculate_expected_temperature
 from backend.monitor.detector import TelemetryMonitor
-from backend.storage.database import get_engine, get_session_factory, init_db
 
 logger = logging.getLogger(__name__)
 
@@ -186,6 +186,7 @@ def run_single_evaluation(
     condition: str,
     output_dir: Path = DEFAULT_OUTPUT_DIR,
     use_live_llm: bool = False,
+    policy_engine: PolicyEngine | None = None,
 ) -> RunEvaluationResult:
     """Execute a single evaluation scenario under the specified condition and seed."""
     run_id = f"eval_{seed}_{condition}"
@@ -193,10 +194,8 @@ def run_single_evaluation(
     run_dir.mkdir(parents=True, exist_ok=True)
 
     db_path = run_dir / "eval.db"
-    db_url = f"sqlite:///{db_path.as_posix()}"
-    engine = get_engine(db_url)
-    init_db(engine)
-    session = get_session_factory(engine)()
+    conn = sqlite3.connect(db_path)
+    conn.close()
 
     # Time setup using FakeClock
     start_time = datetime(2026, 6, 1, 6, 0, 0, tzinfo=UTC)
@@ -248,7 +247,7 @@ def run_single_evaluation(
     )
 
     # 3. Setup LLM / Rule Diagnosers
-    policy_engine = PolicyEngine.load()
+    active_policy = policy_engine if policy_engine is not None else PolicyEngine.load()
     fake_client = FakeEvaluationLLMClient(seed=seed)
     diag_quota = QuotaTracker(daily_call_limit=10000)
     rem_quota = QuotaTracker(daily_call_limit=10000)
@@ -347,7 +346,7 @@ def run_single_evaluation(
 
                     if condition == "rule_baseline":
                         action = action_map.get(cause, "no_action")
-                        is_blocked = not policy_engine.is_allowed(cause, action)
+                        is_blocked = not active_policy.is_allowed(cause, action)
                         proposals.append(
                             ProposalItem(
                                 proposal_id=str(uuid.uuid4()),
@@ -388,7 +387,7 @@ def run_single_evaluation(
                         else str(prop_res.action)
                     )
                     if condition == "llm_with_approval":
-                        was_blocked = not policy_engine.is_allowed(cause_str, action_str)
+                        was_blocked = not active_policy.is_allowed(cause_str, action_str)
                     else:  # llm_unmoderated
                         was_blocked = False
 
@@ -403,9 +402,6 @@ def run_single_evaluation(
                     )
 
         current_step_time += timedelta(seconds=step_s)
-
-    session.close()
-    engine.dispose()
 
     # Compute evaluation metrics
     det_metrics = compute_detection_latency(ground_truth_items, alerts)
@@ -462,15 +458,20 @@ def run_benchmark(
             )
 
     results_by_condition: dict[str, list[dict[str, Any]]] = {c: [] for c in eval_conditions}
+    shared_policy = PolicyEngine.load()
+    logging.getLogger("backend.monitor.detector").setLevel(logging.ERROR)
 
     for cond in eval_conditions:
-        for seed in seeds:
+        for i, seed in enumerate(seeds):
             res = run_single_evaluation(
                 seed=seed,
                 condition=cond,
                 output_dir=output_dir,
                 use_live_llm=use_live_llm,
+                policy_engine=shared_policy,
             )
+            if (i + 1) % 25 == 0 or (i + 1) == len(seeds):
+                print(f"[{cond}] Evaluated {i + 1}/{len(seeds)} scenarios...")
             # Convert to serializable dict
             res_dict = {
                 "seed": res.seed,
