@@ -1,4 +1,4 @@
-.PHONY: install lint type test security check run broker-users create-key
+.PHONY: install lint type test security check run broker-users create-key eval
 
 PYTHON ?= python
 
@@ -32,3 +32,6 @@ broker-users:
 
 create-key:
 	$(PYTHON) scripts/create_key.py --role $(ROLE) --label $(LABEL)
+
+eval:
+	$(PYTHON) -m backend.evaluation.report $(if $(FINAL),--final,)
