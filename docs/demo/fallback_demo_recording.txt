@@ -1,0 +1,65 @@
+=== IIR DEMO TRANSCRIPT & FALLBACK RECORDING ===
+Generated: 2026-06-01T14:30:00+00:00
+Scenario: Injected Overheating Fault (INV-01) & Grid Sag Rejection
+
+[00:00] STEP 1: Broker & Infrastructure Start
+Command: docker compose up -d mosquitto
+Output: [mosquitto] Listening on 127.0.0.1:1883, allow_anonymous=false, TLS ready on :8883
+
+[00:15] STEP 2: Fleet Simulator Launch
+Command: python -m simulator.runner --fleet 20 --seed 42 --start 2026-06-01T06:00:00Z
+Output: [simulator] 20 commercial solar inverters initialized. Telemetry loop active.
+
+[00:30] STEP 3: Deterministic Fault Injection
+Event: Fault OVERHEATING scheduled for INV-01 at 14:30:00Z (Duration: 600s)
+Output: [fault_scheduler] Injected thermal anomaly: inverter core heatsink thermal rise +25°C.
+
+[00:45] STEP 4: Deterministic Monitor Alert Detection
+Output: [detector] Alert raised:
+  - Alert ID: a1b2c3d4-e5f6-7890-abcd-ef0123456789
+  - Device: INV-01
+  - Rule: temp_high_for_power
+  - Severity: CRITICAL
+  - Observed: 73.2°C (Threshold: 52.0°C expected for 4120W active load)
+
+[01:00] STEP 5: Diagnosis Agent Root Cause Assessment
+Input: XML delimited <alert> block (passive data)
+Output: [DiagnosisAgent] Validated JSON result:
+  - Cause: overheating
+  - Confidence: 0.94
+  - Evidence: ["Core temperature 73.2C exceeds thermal baseline by 21.2C", "Load ratio 82% normal, ventilation restricted"]
+
+[01:15] STEP 6: Remediation Agent Proposal Generation
+Output: [RemediationAgent] Validated JSON proposal:
+  - Proposal ID: prop-001-overheating
+  - Device: INV-01
+  - Action: reduce_load
+  - Justification: "Throttle inverter active power to 50% to prevent thermal shutdown and protect IGBT components."
+
+[01:30] STEP 7: Operator Approval Gate (Approval)
+UI State: Workflow paused at 'await_approval' node.
+Action: Lead Operator sends POST /api/incidents/inc-001/approval with decision=approve
+Audit: AUDIT-000005 approved by lead_operator_01 at 2026-06-01T14:31:00Z
+
+[01:45] STEP 8: Sandboxed Simulator Execution & Verification
+Output: [executor] Dispatching state command: INV-01 power curtailment 50%
+Result: Simulator state updated. Inverter temperature dropped from 73.2°C to 54.1°C within 180s.
+
+[01:55] STEP 9: Second Incident - Unsafe Action Intercepted & Rejected
+Event: Fault GRID_SAG triggered on INV-02.
+Agent Proposal: reset_relay
+Policy Engine: Action 'reset_relay' FORBIDDEN on cause 'grid_sag' (Harm severity: CRITICAL)
+Operator Gate: Operator rejects proposal (decision=reject, reason="Grid sag in progress, reconnecting relay causes dangerous reverse-power feed").
+Status: PROPOSAL REJECTED, logged as 'policy_blocked' / 'operator_rejected'. Zero hardware damage.
+
+[02:00] STEP 10: Append-Only Audit Trail
+Audit Events:
+  1. AUDIT-000001 alert_raised (INV-01, temp_high_for_power)
+  2. AUDIT-000002 diagnosis_made (overheating, 0.94)
+  3. AUDIT-000003 proposal_made (reduce_load)
+  4. AUDIT-000004 approval_requested (prop-001-overheating)
+  5. AUDIT-000005 approved (lead_operator_01)
+  6. AUDIT-000006 executed (reduce_load on INV-01)
+  7. AUDIT-000007 alert_raised (INV-02, grid_voltage_low)
+  8. AUDIT-000008 proposal_rejected (reset_relay blocked on grid_sag)
+=== END DEMO ===

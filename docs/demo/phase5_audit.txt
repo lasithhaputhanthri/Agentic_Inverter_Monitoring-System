@@ -1,10 +1,10 @@
 # Incident Response Workflow Phase 5 Audit Log
-# Incident Thread: b5f17db1-e30b-478e-85ac-222a7f6d4bcf
+# Incident Thread: b131f64b-cca0-46aa-b469-7476ccf340d1
 # Generated: 2026-06-01T14:30:00+00:00
 # ----------------------------------------------------------------------
-[2026-06-01T14:30:00+00:00] AUDIT-000001 alert_raised: alert_id=b5f17db1-e30b-478e-85ac-222a7f6d4bcf, device_id=INV-01, rule=temp_high_for_power, severity=warning
-[2026-11-09T07:31:49.541254+00:00] AUDIT-000002 diagnosis_made: alert_id=b5f17db1-e30b-478e-85ac-222a7f6d4bcf, cause=overheating, confidence=0.94, device_id=INV-01
-[2026-11-09T07:31:49.543269+00:00] AUDIT-000003 proposal_made: action=reduce_load, device_id=INV-01, proposal_id=3a4447ad-75ff-4606-9e71-27465fbc0ac4
-[2026-11-09T07:31:49.544243+00:00] AUDIT-000004 approval_requested: action=reduce_load, device_id=INV-01, proposal_id=3a4447ad-75ff-4606-9e71-27465fbc0ac4
-[2026-06-01T14:31:00+00:00] AUDIT-000005 approved: approver_id=lead_operator_01, decision=approve, proposal_id=3a4447ad-75ff-4606-9e71-27465fbc0ac4
-[2026-06-01T14:30:00+00:00] AUDIT-000006 executed: action=reduce_load, device_id=INV-01, proposal_id=3a4447ad-75ff-4606-9e71-27465fbc0ac4
+[2026-06-01T14:30:00+00:00] AUDIT-000001 alert_raised: alert_id=b131f64b-cca0-46aa-b469-7476ccf340d1, device_id=INV-01, rule=temp_high_for_power, severity=warning
+[2026-11-09T09:47:52.464421+00:00] AUDIT-000002 diagnosis_made: alert_id=b131f64b-cca0-46aa-b469-7476ccf340d1, cause=overheating, confidence=0.94, device_id=INV-01
+[2026-11-09T09:47:52.466435+00:00] AUDIT-000003 proposal_made: action=reduce_load, device_id=INV-01, proposal_id=0e84a28c-c0a7-4fae-b699-2d07b8d2fabf
+[2026-11-09T09:47:52.467486+00:00] AUDIT-000004 approval_requested: action=reduce_load, device_id=INV-01, proposal_id=0e84a28c-c0a7-4fae-b699-2d07b8d2fabf
+[2026-06-01T14:31:00+00:00] AUDIT-000005 approved: approver_id=lead_operator_01, decision=approve, proposal_id=0e84a28c-c0a7-4fae-b699-2d07b8d2fabf
+[2026-06-01T14:30:00+00:00] AUDIT-000006 executed: action=reduce_load, device_id=INV-01, proposal_id=0e84a28c-c0a7-4fae-b699-2d07b8d2fabf
