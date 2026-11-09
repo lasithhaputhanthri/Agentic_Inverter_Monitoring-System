@@ -9,3 +9,58 @@ services:
       - ./config/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
       - ./config/mosquitto/password_file:/mosquitto/config/password_file:ro
       - ./config/mosquitto/acl_file:/mosquitto/config/acl_file:ro
+
+  backend:
+    build:
+      context: .
+      target: backend
+    container_name: iir-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - MQTT_HOST=mosquitto
+      - MQTT_PORT=1883
+      - APP_ENV=development
+      - DATABASE_URL=sqlite:////app/data/iir.db
+    volumes:
+      - iir-data:/app/data
+    depends_on:
+      - mosquitto
+
+  simulator:
+    build:
+      context: .
+      target: simulator
+    container_name: iir-simulator
+    restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - MQTT_HOST=mosquitto
+      - MQTT_PORT=1883
+    depends_on:
+      - mosquitto
+
+  frontend:
+    build:
+      context: .
+      target: frontend
+    container_name: iir-frontend
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - API_BASE_URL=http://backend:8000/v1
+    depends_on:
+      - backend
+
+volumes:
+  iir-data:
