@@ -1,6 +1,25 @@
-"""LangGraph incident response coordination workflow.
+"""Multi-agent incident response workflow package."""
 
-Purpose: Orchestrates the pipeline from alert to diagnosis, remediation, and human approval.
-Inputs: Alerts and state transitions.
-Outputs: Coordinated incident execution state.
-"""
+from backend.workflow.approval import (
+    ApprovalAlreadyDecidedError,
+    ApprovalDecision,
+    ApprovalRecord,
+    ApprovalStore,
+)
+from backend.workflow.audit import (
+    AuditEvent,
+    AuditEventType,
+    AuditSink,
+    InMemoryAuditSink,
+)
+
+__all__ = [
+    "ApprovalAlreadyDecidedError",
+    "ApprovalDecision",
+    "ApprovalRecord",
+    "ApprovalStore",
+    "AuditEvent",
+    "AuditEventType",
+    "AuditSink",
+    "InMemoryAuditSink",
+]

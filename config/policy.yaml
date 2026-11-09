@@ -1,0 +1,25 @@
+# Remediation Policy Allowlist
+# Maps DiagnosisCause to permitted RemediationActions.
+# Any pair not listed is strictly blocked by the policy engine.
+
+overheating:
+  - reduce_load
+  - schedule_inspection
+  - no_action
+
+grid_sag:
+  - schedule_inspection
+  - no_action
+
+stuck_relay:
+  - reset_relay
+  - schedule_inspection
+  - no_action
+
+comm_dropout:
+  - schedule_inspection
+  - no_action
+
+unknown:
+  - no_action
+  - schedule_inspection
