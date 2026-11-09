@@ -15,6 +15,9 @@ from typing import Any, Literal
 
 import requests
 import streamlit as st
+from dotenv import load_dotenv
+
+load_dotenv()
 
 API_BASE_URL = os.getenv("API_BASE_URL", "http://127.0.0.1:8000/v1")
 API_KEY = os.getenv("IIR_API_KEY", "")
@@ -23,8 +26,9 @@ API_KEY = os.getenv("IIR_API_KEY", "")
 def get_headers() -> dict[str, str]:
     """Construct HTTP request headers including API key."""
     headers = {"Content-Type": "application/json"}
-    if API_KEY:
-        headers["X-API-Key"] = API_KEY
+    active_key = st.session_state.get("api_key") or os.getenv("IIR_API_KEY") or API_KEY
+    if active_key:
+        headers["X-API-Key"] = active_key
     return headers
 
 
@@ -88,10 +92,23 @@ def main() -> None:
 
     st.title("⚡ Solar Fleet Incident Response Monitor")
 
+    # Sidebar: API Key input & server status
+    st.sidebar.header("🔑 Authentication")
+    current_key = st.session_state.get("api_key") or os.getenv("IIR_API_KEY") or API_KEY
+    key_input = st.sidebar.text_input(
+        "Operator API Key",
+        value=current_key,
+        type="password",
+        help="Paste the API key generated via 'python scripts/create_key.py --role approver --label Admin'",
+    )
+    if key_input:
+        st.session_state["api_key"] = key_input
+        current_key = key_input
+
     # API Connection and authentication banner
-    if not API_KEY:
+    if not current_key:
         st.warning(
-            "⚠️ No API key set in IIR_API_KEY environment variable. Operations will fail authentication."
+            "⚠️ No API key set. Paste your generated API key in the sidebar or set IIR_API_KEY in .env."
         )
 
     role = get_current_user_role()
