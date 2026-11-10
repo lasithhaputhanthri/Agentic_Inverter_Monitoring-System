@@ -20,6 +20,8 @@ dependencies = [
     "pillow==13.0.0",
     "langgraph==1.2.20",
     "pyyaml==6.0.3",
+    "google-genai==2.34.0",
+    "python-dotenv==1.0.1",
 ]
 
 [project.optional-dependencies]

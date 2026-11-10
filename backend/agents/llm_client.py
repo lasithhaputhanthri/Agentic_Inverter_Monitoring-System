@@ -160,7 +160,8 @@ class GeminiLLMClient:
 
         config = types.GenerateContentConfig(
             temperature=temperature,
-            max_output_tokens=max_tokens or 300,
+            max_output_tokens=max(max_tokens or 600, 600),
+            response_mime_type="application/json",
         )
 
         models_to_try = [self.model_name]
